@@ -1,0 +1,45 @@
+# OS
+.DS_Store
+**/.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Next.js / build
+frontend/.next/
+frontend/out/
+frontend/build/
+**/*.tsbuildinfo
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+*.pem
+
+# Vercel
+.vercel/
+frontend/.vercel/
+
+# Debug / logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Editor / tooling
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local restore / scratch
+.restore-snapshot/
+
+# Cursor / agent local assets (not app source)
+.cursor/
