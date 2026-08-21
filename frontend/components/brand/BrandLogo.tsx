@@ -30,8 +30,8 @@ export default function BrandLogo({
       <Image
         src={src}
         alt="Scale12x"
-        width={180}
-        height={112}
+        width={tone === "dark" ? 331 : 283}
+        height={tone === "dark" ? 223 : 175}
         priority={priority}
         sizes="(max-width: 767px) 192px, (max-width: 1023px) 260px, 280px"
         className="brand-logo__img"
