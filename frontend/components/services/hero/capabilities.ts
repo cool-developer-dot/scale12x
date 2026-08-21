@@ -8,8 +8,8 @@ export const CAPABILITIES: Capability[] = [
   { id: "01", label: "Strategy", href: "#capability-01" },
   { id: "02", label: "AI", href: "#capability-02" },
   { id: "03", label: "Technology", href: "#capability-03" },
-  { id: "04", label: "Brand", href: "#capability-04" },
-  { id: "05", label: "Media", href: "#capability-05" },
+  { id: "04", label: "Cloud", href: "#capability-04" },
+  { id: "05", label: "Security", href: "#capability-05" },
   { id: "06", label: "Digital", href: "#capability-06" },
   { id: "07", label: "Search", href: "#capability-07" },
 ];

@@ -10,8 +10,7 @@ export type ServiceIcon =
   | "orbit"
   | "chip"
   | "cloud"
-  | "spark"
-  | "funnel"
+  | "shield"
   | "window"
   | "search";
 
@@ -73,24 +72,24 @@ export const SERVICES: ServiceItem[] = [
   {
     index: "04",
     label: "CAPABILITY",
-    title: "Brand & Creative",
-    description: "Identity, ad creative, and design that converts.",
-    visual: "brand",
-    icon: "spark",
+    title: "Cloud Computing",
+    description: "Secure, scalable cloud infrastructure built for modern operations.",
+    visual: "cloud",
+    icon: "cloud",
     surface: "blue",
     row: "bottom",
-    href: "/services/brand-creative",
+    href: "/services/cloud-computing",
   },
   {
     index: "05",
     label: "CAPABILITY",
-    title: "Paid Media",
-    description: "Google, Meta, LinkedIn, spend that returns.",
-    visual: "paid",
-    icon: "funnel",
+    title: "Cybersecurity",
+    description: "Protect systems, data, and operations with security built in.",
+    visual: "cyber",
+    icon: "shield",
     surface: "navy",
     row: "bottom",
-    href: "/services/paid-media",
+    href: "/services/cybersecurity",
   },
   {
     index: "06",

@@ -4,8 +4,8 @@ export type CapabilityVisualKey =
   | "growth"
   | "ai"
   | "technology"
-  | "brand"
-  | "paid"
+  | "cloud"
+  | "cyber"
   | "web";
 
 export type CapabilityItem = {
@@ -48,20 +48,20 @@ export const CAPABILITIES: CapabilityItem[] = [
   },
   {
     id: "04",
-    visual: "brand",
-    title: "Brand & Creative",
-    promise: "Identity, ad creative, and design that converts.",
-    status: "Identity · Narrative · Design",
-    href: "/services/brand-creative",
+    visual: "cloud",
+    title: "Cloud Computing",
+    promise: "Secure, scalable cloud infrastructure built for modern operations.",
+    status: "Architecture · Migration · Reliability",
+    href: "/services/cloud-computing",
     featured: true,
   },
   {
     id: "05",
-    visual: "paid",
-    title: "Paid Media",
-    promise: "Google, Meta, LinkedIn, spend that returns.",
-    status: "Performance · Acquisition · Scale",
-    href: "/services/paid-media",
+    visual: "cyber",
+    title: "Cybersecurity",
+    promise: "Protect systems, data, and operations with security built in.",
+    status: "Protection · Identity · Monitoring",
+    href: "/services/cybersecurity",
   },
   {
     id: "06",

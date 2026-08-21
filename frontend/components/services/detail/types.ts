@@ -2,8 +2,8 @@ export type ServiceSlug =
   | "growth-strategy"
   | "ai-automation"
   | "technology-transformation"
-  | "brand-creative"
-  | "paid-media"
+  | "cloud-computing"
+  | "cybersecurity"
   | "web-digital"
   | "search";
 
@@ -11,8 +11,8 @@ export type CoreVariant =
   | "growth"
   | "ai"
   | "technology"
-  | "brand"
-  | "media"
+  | "cloud"
+  | "cyber"
   | "web"
   | "search";
 

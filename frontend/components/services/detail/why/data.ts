@@ -134,87 +134,86 @@ export const WHY_IT_MATTERS: Record<ServiceSlug, WhyItMattersConfig> = {
     ],
   },
 
-  "brand-creative": {
-    service: "brand-creative",
+  "cloud-computing": {
+    service: "cloud-computing",
     eyebrow: "WHY IT MATTERS / 04",
     headline: [
-      { segments: [{ text: "Being seen is easy." }] },
+      { segments: [{ text: "Infrastructure should accelerate growth," }] },
       { segments: [{ text: "" }] },
       {
         segments: [
-          { text: "Being remembered", accent: true },
-        ],
-      },
-      { segments: [{ text: "is harder." }] },
-    ],
-    supportingCopy:
-      "Inconsistent positioning, identity, and creative make the brand harder to recognize, trust, and buy from.",
-    tensions: [
-      {
-        index: "01",
-        title: "The brand feels inconsistent.",
-        description:
-          "Different channels communicate different versions of the same company.",
-      },
-      {
-        index: "02",
-        title: "Differentiation disappears.",
-        description:
-          "Without a clear point of view, strong businesses look interchangeable.",
-      },
-      {
-        index: "03",
-        title: "Creative loses leverage.",
-        description:
-          "One-off assets create output, not a brand system that compounds.",
-      },
-    ],
-    opportunityLabel: "THE OPPORTUNITY:",
-    opportunityStatement: [
-      { text: "build a brand system that converts, not a one-off deck" },
-      { text: ".", accent: true },
-    ],
-  },
-
-  "paid-media": {
-    service: "paid-media",
-    eyebrow: "WHY IT MATTERS / 05",
-    headline: [
-      { segments: [{ text: "More spend does not" }] },
-      { segments: [{ text: "guarantee more growth." }] },
-      { segments: [{ text: "" }] },
-      {
-        segments: [
-          { text: "Better systems do", accent: true },
+          { text: "not become its bottleneck", accent: true },
           { text: "." },
         ],
       },
     ],
     supportingCopy:
-      "Weak creative, unclear attribution, and inefficient allocation turn paid media into a cost center instead of predictable acquisition.",
+      "Scaling pressure, legacy environments, and unmanaged cloud spend turn infrastructure into friction instead of leverage.",
     tensions: [
       {
         index: "01",
-        title: "Spend leaks into waste.",
+        title: "Scaling creates infrastructure pressure.",
         description:
-          "Budgets scale before campaigns, audiences, and creative are validated.",
+          "Demand grows faster than environments, capacity planning, and release systems can absorb.",
       },
       {
         index: "02",
-        title: "Creative learns too slowly.",
+        title: "Legacy environments slow delivery.",
         description:
-          "Without structured testing, teams repeat assumptions instead of compounding insight.",
+          "Brittle stacks and manual operations force teams to wait on infrastructure instead of shipping value.",
       },
       {
         index: "03",
-        title: "Attribution stays unclear.",
+        title: "Cloud spend grows without clear architecture.",
         description:
-          "Fragmented performance signals make confident scaling hard.",
+          "Without intentional topology and ownership, cost rises while reliability stays uneven.",
       },
     ],
     opportunityLabel: "THE OPPORTUNITY:",
     opportunityStatement: [
-      { text: "turn every media dollar into a measurable growth signal" },
+      { text: "build a cloud foundation that stays efficient as the business grows" },
+      { text: ".", accent: true },
+    ],
+  },
+
+  cybersecurity: {
+    service: "cybersecurity",
+    eyebrow: "WHY IT MATTERS / 05",
+    headline: [
+      { segments: [{ text: "Security gaps become business risk" }] },
+      { segments: [{ text: "" }] },
+      {
+        segments: [
+          { text: "long before they become incidents", accent: true },
+          { text: "." },
+        ],
+      },
+    ],
+    supportingCopy:
+      "Expanding access, cloud surface area, and late-stage controls leave systems exposed while teams move faster.",
+    tensions: [
+      {
+        index: "01",
+        title: "Access expands faster than controls.",
+        description:
+          "Users, services, and integrations multiply without matching identity and permission discipline.",
+      },
+      {
+        index: "02",
+        title: "Cloud and applications increase the attack surface.",
+        description:
+          "More environments and interfaces create more paths into systems that matter.",
+      },
+      {
+        index: "03",
+        title: "Security is often added after systems are already live.",
+        description:
+          "When protection is bolted on late, risk accumulates silently in production.",
+      },
+    ],
+    opportunityLabel: "THE OPPORTUNITY:",
+    opportunityStatement: [
+      { text: "make security part of the architecture, not an afterthought" },
       { text: ".", accent: true },
     ],
   },

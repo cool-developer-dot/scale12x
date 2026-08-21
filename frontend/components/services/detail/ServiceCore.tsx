@@ -63,24 +63,45 @@ function CoreGeometry({
     );
   }
 
-  if (variant === "brand") {
-    const g = r * 0.55;
+  if (variant === "cloud") {
     return (
       <>
-        <rect x={cx - g} y={cy - g} width={g * 2} height={g * 2} fill={fill} stroke={stroke} strokeWidth="1.1" />
-        <line x1={cx} y1={cy - g} x2={cx} y2={cy + g} stroke={stroke} strokeWidth="0.8" />
-        <line x1={cx - g} y1={cy} x2={cx + g} y2={cy} stroke={stroke} strokeWidth="0.8" />
-        <circle cx={cx} cy={cy} r={2.6} fill="#F8FAFC" />
+        <ellipse cx={cx} cy={cy - r * 0.15} rx={r * 0.95} ry={r * 0.55} fill={fill} stroke={stroke} strokeWidth="1.1" />
+        <circle cx={cx - r * 0.55} cy={cy + r * 0.45} r={r * 0.22} fill={fillInner} stroke={stroke} strokeWidth="0.9" />
+        <circle cx={cx} cy={cy + r * 0.55} r={r * 0.22} fill={fillInner} stroke={stroke} strokeWidth="0.9" />
+        <circle cx={cx + r * 0.55} cy={cy + r * 0.45} r={r * 0.22} fill={fillInner} stroke={stroke} strokeWidth="0.9" />
+        <line x1={cx} y1={cy + r * 0.1} x2={cx - r * 0.55} y2={cy + r * 0.3} stroke={stroke} strokeWidth="0.85" />
+        <line x1={cx} y1={cy + r * 0.1} x2={cx} y2={cy + r * 0.35} stroke={stroke} strokeWidth="0.85" />
+        <line x1={cx} y1={cy + r * 0.1} x2={cx + r * 0.55} y2={cy + r * 0.3} stroke={stroke} strokeWidth="0.85" />
+        <circle cx={cx} cy={cy - r * 0.15} r={2.6} fill="#2563EB" />
       </>
     );
   }
 
-  if (variant === "media") {
+  if (variant === "cyber") {
     return (
       <>
-        <path d={`M ${cx - r} ${cy} L ${cx} ${cy - r * 0.85} L ${cx + r} ${cy} L ${cx} ${cy + r * 0.55} Z`} fill={fill} stroke={stroke} strokeWidth="1.1" />
-        <path d={`M ${cx - r * 0.55} ${cy} L ${cx} ${cy - r * 0.45} L ${cx + r * 0.55} ${cy}`} fill="none" stroke={stroke} strokeWidth="0.9" />
-        <circle cx={cx} cy={cy} r={2.8} fill="#2563EB" />
+        <path
+          d={`M ${cx} ${cy - r} L ${cx + r * 0.75} ${cy - r * 0.55} L ${cx + r * 0.75} ${cy + r * 0.15} L ${cx} ${cy + r} L ${cx - r * 0.75} ${cy + r * 0.15} L ${cx - r * 0.75} ${cy - r * 0.55} Z`}
+          fill={fill}
+          stroke={stroke}
+          strokeWidth="1.1"
+        />
+        <path
+          d={`M ${cx} ${cy - r * 0.55} L ${cx + r * 0.4} ${cy - r * 0.28} L ${cx + r * 0.4} ${cy + r * 0.05} L ${cx} ${cy + r * 0.45} L ${cx - r * 0.4} ${cy + r * 0.05} L ${cx - r * 0.4} ${cy - r * 0.28} Z`}
+          fill={fillInner}
+          stroke={stroke}
+          strokeWidth="0.9"
+        />
+        <circle cx={cx} cy={cy - r * 0.05} r={2.6} fill="#2563EB" />
+        <path
+          d={`M ${cx - r * 0.18} ${cy - r * 0.05} L ${cx - r * 0.02} ${cy + r * 0.12} L ${cx + r * 0.22} ${cy - r * 0.22}`}
+          fill="none"
+          stroke="#F8FAFC"
+          strokeWidth="1.1"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
       </>
     );
   }

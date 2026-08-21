@@ -40,16 +40,22 @@ export default function ServiceCardIcon({ name }: ServiceCardIconProps) {
           />
         </svg>
       );
-    case "spark":
+    case "shield":
       return (
         <svg {...common}>
-          <path d="M12 3.5 13.8 10.2 20.5 12 13.8 13.8 12 20.5 10.2 13.8 3.5 12 10.2 10.2 12 3.5Z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
-        </svg>
-      );
-    case "funnel":
-      return (
-        <svg {...common}>
-          <path d="M4 5h16l-5.5 7.5V19l-5 2v-8.5L4 5Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+          <path
+            d="M12 3.5 19 6.5v5.2c0 4.2-2.9 7.8-7 9-4.1-1.2-7-4.8-7-9V6.5L12 3.5Z"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M9.2 11.6 11.1 13.5 14.8 9.6"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       );
     case "window":

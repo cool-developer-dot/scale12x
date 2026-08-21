@@ -20,6 +20,20 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ["gsap", "framer-motion"],
   },
+  async redirects() {
+    return [
+      {
+        source: "/services/brand-creative",
+        destination: "/services/cloud-computing",
+        permanent: true,
+      },
+      {
+        source: "/services/paid-media",
+        destination: "/services/cybersecurity",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

@@ -1,8 +1,8 @@
 import GrowthStrategyVisual from "./GrowthStrategyVisual";
 import AIAutomationVisual from "./AIAutomationVisual";
 import TechnologyVisual from "./TechnologyVisual";
-import BrandCreativeVisual from "./BrandCreativeVisual";
-import PaidMediaVisual from "./PaidMediaVisual";
+import CloudComputingVisual from "./CloudComputingVisual";
+import CybersecurityVisual from "./CybersecurityVisual";
 import WebDigitalVisual from "./WebDigitalVisual";
 import SearchVisual from "./SearchVisual";
 
@@ -10,8 +10,8 @@ export {
   GrowthStrategyVisual,
   AIAutomationVisual,
   TechnologyVisual,
-  BrandCreativeVisual,
-  PaidMediaVisual,
+  CloudComputingVisual,
+  CybersecurityVisual,
   WebDigitalVisual,
   SearchVisual,
 };
@@ -20,8 +20,8 @@ export const SERVICE_VISUALS = {
   growth: GrowthStrategyVisual,
   ai: AIAutomationVisual,
   technology: TechnologyVisual,
-  brand: BrandCreativeVisual,
-  paid: PaidMediaVisual,
+  cloud: CloudComputingVisual,
+  cyber: CybersecurityVisual,
   web: WebDigitalVisual,
   search: SearchVisual,
 } as const;

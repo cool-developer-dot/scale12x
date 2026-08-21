@@ -7,8 +7,8 @@ export const SERVICE_OPTIONS = [
   "Growth Strategy",
   "AI & Automation",
   "Technology",
-  "Brand & Creative",
-  "Paid Media",
+  "Cloud Computing",
+  "Cybersecurity",
   "Web & Digital",
 ] as const;
 

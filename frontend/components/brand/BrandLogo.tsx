@@ -9,7 +9,7 @@ type BrandLogoProps = {
 };
 
 /**
- * Scale12x stacked wordmark — sized for header at 2× baseline (~56px).
+ * Scale12x stacked wordmark — header uses 2× size via CSS.
  */
 export default function BrandLogo({
   className = "",
@@ -33,7 +33,7 @@ export default function BrandLogo({
         width={180}
         height={112}
         priority={priority}
-        sizes="(max-width: 767px) 132px, (max-width: 1023px) 160px, 180px"
+        sizes="(max-width: 767px) 192px, (max-width: 1023px) 260px, 280px"
         className="brand-logo__img"
       />
     </Link>
