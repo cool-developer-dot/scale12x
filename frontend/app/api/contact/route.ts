@@ -1,114 +1,115 @@
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
+import { randomUUID } from "node:crypto";
 import {
-  BUDGET_OPTIONS,
-  SERVICE_OPTIONS,
-  type BudgetOption,
-  type ServiceOption,
-} from "@/components/contact/data";
+  isContactPayloadTooLarge,
+  validateContactInquiry,
+} from "@/lib/contact/validate";
+import {
+  createServiceClient,
+  isContactDbConfigured,
+} from "@/lib/supabase/admin";
 
 export const runtime = "nodejs";
 
-type Body = {
-  firstName?: unknown;
-  lastName?: unknown;
-  email?: unknown;
-  company?: unknown;
-  role?: unknown;
-  website?: unknown;
-  services?: unknown;
-  opportunity?: unknown;
-  budget?: unknown;
+const GENERIC_ERROR =
+  "Unable to submit your inquiry right now. Please try again.";
+
+type ContactRow = {
+  first_name: string;
+  last_name: string;
+  work_email: string;
+  company: string;
+  role_title: string | null;
+  website: string | null;
+  service: string;
+  message: string;
+  budget: string | null;
 };
 
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-function asString(value: unknown): string {
-  return typeof value === "string" ? value.trim() : "";
-}
-
-function isService(value: unknown): value is ServiceOption {
-  return (
-    typeof value === "string" &&
-    (SERVICE_OPTIONS as readonly string[]).includes(value)
-  );
-}
-
-function isBudget(value: unknown): value is BudgetOption {
-  return (
-    typeof value === "string" &&
-    (BUDGET_OPTIONS as readonly string[]).includes(value)
-  );
+function jsonError(message: string, status: number) {
+  return NextResponse.json({ ok: false, message }, { status });
 }
 
 export async function POST(request: NextRequest) {
-  let body: Body;
+  const requestId = randomUUID();
 
+  if (isContactPayloadTooLarge(request.headers.get("content-length"))) {
+    return jsonError("Request is too large.", 400);
+  }
+
+  let body: unknown;
   try {
-    body = (await request.json()) as Body;
+    body = await request.json();
   } catch {
-    return NextResponse.json({ message: "Invalid request body." }, { status: 400 });
+    return jsonError("Invalid request body.", 400);
   }
 
-  const firstName = asString(body.firstName);
-  const lastName = asString(body.lastName);
-  const email = asString(body.email);
-  const company = asString(body.company);
-  const role = asString(body.role);
-  const website = asString(body.website);
-  const opportunity = asString(body.opportunity);
-  const budgetRaw = asString(body.budget);
-  const services = Array.isArray(body.services)
-    ? body.services.filter(isService)
-    : [];
-
-  if (!firstName || !lastName || !email || !company || !opportunity) {
-    return NextResponse.json(
-      { message: "Please complete all required fields." },
-      { status: 400 },
-    );
+  const validated = validateContactInquiry(body);
+  if (!validated.ok) {
+    return jsonError(validated.message, 400);
   }
 
-  if (!EMAIL_RE.test(email)) {
-    return NextResponse.json(
-      { message: "Enter a valid work email." },
-      { status: 400 },
-    );
+  const { data } = validated;
+
+  if (!isContactDbConfigured()) {
+    console.error("[contact] missing service configuration", { requestId });
+    return jsonError(GENERIC_ERROR, 500);
   }
 
-  if (services.length === 0) {
-    return NextResponse.json(
-      { message: "Select at least one service." },
-      { status: 400 },
-    );
-  }
-
-  if (opportunity.length < 20) {
-    return NextResponse.json(
-      { message: "Please share a bit more detail about the opportunity." },
-      { status: 400 },
-    );
-  }
-
-  const budget = isBudget(budgetRaw) ? budgetRaw : "";
-
-  const payload = {
-    firstName,
-    lastName,
-    email,
-    company,
-    role,
-    website,
-    services,
-    opportunity,
-    budget,
-    receivedAt: new Date().toISOString(),
-    source: "scale12x-contact",
+  const row: ContactRow = {
+    first_name: data.firstName,
+    last_name: data.lastName,
+    work_email: data.workEmail,
+    company: data.company,
+    role_title: data.roleTitle,
+    website: data.website,
+    service: data.service,
+    message: data.message,
+    budget: data.budget,
   };
 
-  const webhook = process.env.CONTACT_WEBHOOK_URL?.trim();
+  try {
+    const supabase = createServiceClient();
+    const { error } = await supabase.from("contact_inquiries").insert({
+      ...row,
+      // status + created_at owned by database defaults — never from client
+    });
 
+    if (error) {
+      console.error("[contact] insert failed", {
+        requestId,
+        code: error.code,
+        timestamp: new Date().toISOString(),
+      });
+      return jsonError(GENERIC_ERROR, 500);
+    }
+  } catch (err) {
+    console.error("[contact] insert exception", {
+      requestId,
+      name: err instanceof Error ? err.name : "unknown",
+      timestamp: new Date().toISOString(),
+    });
+    return jsonError(GENERIC_ERROR, 500);
+  }
+
+  // Notification is best-effort. DB is source of truth.
+  const webhook = process.env.CONTACT_WEBHOOK_URL?.trim();
   if (webhook) {
+    const payload = {
+      firstName: data.firstName,
+      lastName: data.lastName,
+      email: data.workEmail,
+      company: data.company,
+      role: data.roleTitle ?? "",
+      website: data.website ?? "",
+      services: data.service.split(", ").filter(Boolean),
+      opportunity: data.message,
+      budget: data.budget ?? "",
+      receivedAt: new Date().toISOString(),
+      source: "scale12x-contact",
+    };
+
     try {
       const upstream = await fetch(webhook, {
         method: "POST",
@@ -117,26 +118,25 @@ export async function POST(request: NextRequest) {
       });
 
       if (!upstream.ok) {
-        return NextResponse.json(
-          {
-            message:
-              "Unable to deliver your message right now. Please email hello@scale12x.com.",
-          },
-          { status: 502 },
-        );
+        console.error("[contact] webhook failed", {
+          requestId,
+          status: upstream.status,
+          timestamp: new Date().toISOString(),
+        });
       }
     } catch {
-      return NextResponse.json(
-        {
-          message:
-            "Unable to deliver your message right now. Please email hello@scale12x.com.",
-        },
-        { status: 502 },
-      );
+      console.error("[contact] webhook exception", {
+        requestId,
+        timestamp: new Date().toISOString(),
+      });
     }
   } else if (process.env.NODE_ENV === "development") {
-    console.info("[contact]", payload);
+    console.info("[contact] stored", {
+      requestId,
+      service: data.service,
+      hasBudget: Boolean(data.budget),
+    });
   }
 
-  return NextResponse.json({ ok: true });
+  return NextResponse.json({ ok: true }, { status: 201 });
 }
