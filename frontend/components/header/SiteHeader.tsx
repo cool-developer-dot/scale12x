@@ -15,7 +15,6 @@ export default function SiteHeader() {
   const activeId = resolveActiveNav(pathname, hash);
   const onContact =
     pathname === "/contact" || pathname.startsWith("/contact/");
-  const lightHeader = pathname === "/";
 
   useEffect(() => {
     let raf = 0;
@@ -43,10 +42,10 @@ export default function SiteHeader() {
 
   return (
     <header
-      className={`site-header${lightHeader ? " site-header--light" : ""}${scrolled ? " is-scrolled" : ""}`}
+      className={`site-header${scrolled ? " is-scrolled" : ""}`}
     >
       <div className="site-header__inner">
-        <BrandLogo priority tone={lightHeader ? "dark" : "light"} />
+        <BrandLogo priority tone="light" />
 
         <nav
           className="hero-nav hidden items-center lg:flex"
@@ -71,7 +70,7 @@ export default function SiteHeader() {
           <div className="hidden lg:block">
             <CursorFillCta
               href={onContact ? "#project-inquiry" : "/contact"}
-              variant={lightHeader ? "secondary" : "primary"}
+              variant="primary"
               className="site-header__cta h-10 px-5 text-[0.72rem] sm:h-11 sm:text-[0.8rem]"
             >
               Start Scaling

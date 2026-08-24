@@ -22,8 +22,8 @@ export default function HeroSection() {
     <section
       ref={sectionRef}
       id="home"
-      data-hero-theme="light"
-      className={`hero-section hero-section--light${ready ? " is-ready" : ""}`}
+      data-hero-theme="dark"
+      className={`hero-section hero-section--dark${ready ? " is-ready" : ""}`}
     >
       <div className="hero-shell">
         <div className="hero-grid">
@@ -32,7 +32,7 @@ export default function HeroSection() {
               <span className="hero-eyebrow__mark" aria-hidden="true">
                 ≫
               </span>
-              AI, cloud and cybersecurity — engineered to scale
+              AI, cloud and cybersecurity engineered to scale
             </a>
 
             <h1 data-hero-animate className="hero-headline">

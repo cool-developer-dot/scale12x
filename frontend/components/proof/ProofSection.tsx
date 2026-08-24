@@ -8,7 +8,9 @@ const MODULES: ProofMetricData[] = [
   {
     index: "01",
     category: "DELIVERY",
-    value: 1000,
+    value: 1,
+    prefix: "",
+    suffix: "M+",
     label: "DELIVERED",
     description: "Verifiable track record across growth engagements.",
   },

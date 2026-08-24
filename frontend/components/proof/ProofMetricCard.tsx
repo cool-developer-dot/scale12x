@@ -9,6 +9,10 @@ export type ProofMetricData = {
   value: number;
   label: string;
   description: string;
+  /** Defaults to "$" */
+  prefix?: string;
+  /** Defaults to "K+" */
+  suffix?: string;
 };
 
 type ProofMetricCardProps = {
@@ -34,14 +38,20 @@ export default function ProofMetricCard({
   const glowRef = useRef<HTMLDivElement>(null);
   const countedRef = useRef(false);
   const moveRafRef = useRef(0);
-  const [display, setDisplay] = useState(reduceMotion ? `$${data.value}K+` : "$0");
+  const prefix = data.prefix ?? "$";
+  const suffix = data.suffix ?? "K+";
+  const formatFinal = useCallback(
+    () => `${prefix}${data.value}${suffix}`,
+    [prefix, suffix, data.value],
+  );
+  const [display, setDisplay] = useState(reduceMotion ? formatFinal() : `${prefix}0`);
 
   const runCount = useCallback(() => {
     if (countedRef.current) return;
     countedRef.current = true;
 
     if (reduceMotion) {
-      setDisplay(`$${data.value}K+`);
+      setDisplay(formatFinal());
       if (progressRef.current) {
         gsap.set(progressRef.current, { scaleX: 1 });
       }
@@ -68,13 +78,13 @@ export default function ProofMetricCard({
       onUpdate: () => {
         const v = obj.n;
         if (v >= data.value - 0.4) {
-          setDisplay(`$${data.value}K+`);
+          setDisplay(formatFinal());
         } else {
-          setDisplay(`$${Math.round(v)}K`);
+          setDisplay(`${prefix}${Math.round(v)}${suffix.replace(/\+$/, "")}`);
         }
       },
       onComplete: () => {
-        setDisplay(`$${data.value}K+`);
+        setDisplay(formatFinal());
         if (metricRef.current) {
           gsap.fromTo(
             metricRef.current,
@@ -84,7 +94,7 @@ export default function ProofMetricCard({
         }
       },
     });
-  }, [data.value, reduceMotion]);
+  }, [data.value, reduceMotion, formatFinal, prefix, suffix]);
 
   useEffect(() => {
     if (!animate) return;
