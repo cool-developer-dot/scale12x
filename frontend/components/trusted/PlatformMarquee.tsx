@@ -27,7 +27,7 @@ function PlatformItemView({
         src={platform.src}
         alt=""
         className="platform-item__logo"
-        loading="lazy"
+        loading="eager"
         decoding="async"
         draggable={false}
         aria-hidden="true"

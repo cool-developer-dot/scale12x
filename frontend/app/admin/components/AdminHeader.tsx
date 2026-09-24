@@ -4,7 +4,7 @@ export default function AdminHeader() {
   return (
     <header className="admin-app__header">
       <div className="admin-app__brand">
-        <span className="admin-app__brand-mark">Scale12x</span>
+        <span className="admin-app__brand-mark">Scale 12x</span>
         <span className="admin-app__brand-sep" aria-hidden="true">
           /
         </span>

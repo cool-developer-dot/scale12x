@@ -12,7 +12,7 @@ import {
 } from "@/lib/contact/types";
 
 export const metadata: Metadata = {
-  title: "Contact Inquiries · Scale12x Admin",
+  title: "Contact inquiries · Scale 12x Admin",
   robots: {
     index: false,
     follow: false,
@@ -61,9 +61,9 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
       <AdminHeader />
       <main className="admin-app__main">
         <div className="admin-app__intro">
-          <h1 className="admin-app__title">Contact Inquiries</h1>
+          <h1 className="admin-app__title">Contact inquiries</h1>
           <p className="admin-app__subtitle">
-            Incoming project inquiries from the Scale12x contact form.
+            Incoming project inquiries from the Scale 12x contact form.
           </p>
         </div>
 

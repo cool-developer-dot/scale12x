@@ -204,9 +204,9 @@ export default function AIWorkflowVisual({
       >
         <defs>
           <radialGradient id="ai-core-glow" cx="50%" cy="45%" r="50%">
-            <stop offset="0%" stopColor="rgba(37,99,235,0.28)" />
-            <stop offset="55%" stopColor="rgba(37,99,235,0.08)" />
-            <stop offset="100%" stopColor="rgba(37,99,235,0)" />
+            <stop offset="0%" stopColor="rgba(var(--accent-rgb), 0.28)" />
+            <stop offset="55%" stopColor="rgba(var(--accent-rgb), 0.08)" />
+            <stop offset="100%" stopColor="rgba(var(--accent-rgb), 0)" />
           </radialGradient>
         </defs>
 
@@ -255,7 +255,7 @@ export default function AIWorkflowVisual({
                       className="ai-hero__route--travel"
                       d={r.inbound}
                       fill="none"
-                      stroke="#60A5FA"
+                      stroke="rgb(var(--accent-rgb))"
                       strokeWidth={1.9}
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -289,7 +289,7 @@ export default function AIWorkflowVisual({
                       className="ai-hero__route--travel"
                       d={r.outbound}
                       fill="none"
-                      stroke="#3B82F6"
+                      stroke="rgb(var(--accent-rgb))"
                       strokeWidth={2}
                       strokeLinecap="round"
                       strokeLinejoin="round"

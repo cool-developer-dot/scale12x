@@ -1,7 +1,7 @@
 export const MEETING_DETAILS = {
   duration: "30 minutes",
   platform: "Google Meet",
-  type: "Strategy / Discovery Session",
+  type: "Strategy / discovery session",
   note: "You'll receive the meeting link automatically after booking.",
 } as const;
 
@@ -39,8 +39,8 @@ export function getCalendlyEmbedUrl(
     url.searchParams.set("hide_event_type_details", "1");
     url.searchParams.set("hide_gdpr_banner", "1");
     url.searchParams.set("background_color", "ffffff");
-    url.searchParams.set("text_color", "0b1220");
-    url.searchParams.set("primary_color", "0055ff");
+    url.searchParams.set("text_color", "111111");
+    url.searchParams.set("primary_color", "1f4fd8");
     return url.toString();
   } catch {
     return raw;

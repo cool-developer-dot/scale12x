@@ -50,9 +50,9 @@ export default function SystemPath({
   const stroke = illuminated
     ? depth === "foreground"
       ? style === "cobalt" || style === "active"
-        ? "#3B82F6"
-        : "rgba(210, 225, 245, 0.78)"
-      : "rgba(120, 150, 200, 0.42)"
+        ? "rgb(var(--accent-rgb))"
+        : "rgba(var(--fg-rgb), 0.78)"
+      : "rgba(var(--accent-rgb), 0.42)"
     : base;
   const sw = illuminated ? Math.min(width + 0.25, 1.7) : width;
   const opacity = DEPTH_OPACITY[depth];
@@ -99,7 +99,7 @@ export default function SystemPath({
           key={`travel-${id}-${travelKey}`}
           d={d}
           fill="none"
-          stroke="#60A5FA"
+          stroke="rgb(var(--accent-rgb))"
           strokeWidth={Math.min(width + 0.55, 1.95)}
           strokeLinecap="round"
           strokeLinejoin="round"

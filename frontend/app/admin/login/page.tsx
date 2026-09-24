@@ -4,7 +4,7 @@ import { redirectIfAdminAuthenticated } from "@/lib/admin/auth";
 import { isAdminAuthConfigured } from "@/lib/supabase/env";
 
 export const metadata: Metadata = {
-  title: "Scale12x Admin",
+  title: "Scale 12x Admin",
   robots: {
     index: false,
     follow: false,
@@ -47,9 +47,9 @@ export default async function AdminLoginPage({ searchParams }: LoginPageProps) {
     <div className="admin-panel">
       <header className="admin-panel__brand">
         <p className="admin-panel__eyebrow">Internal access</p>
-        <h1 className="admin-panel__title">Scale12x Admin</h1>
+        <h1 className="admin-panel__title">Scale 12x Admin</h1>
         <p className="admin-panel__subtitle">
-          Sign in with your approved Scale12x credentials.
+          Sign in with your approved Scale 12x credentials.
         </p>
       </header>
 

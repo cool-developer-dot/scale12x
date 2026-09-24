@@ -38,7 +38,7 @@ export const SERVICES: ServiceItem[] = [
   {
     index: "01",
     label: "PILLAR",
-    title: "Growth Strategy",
+    title: "Growth strategy",
     description: "Positioning, channels, and priorities that compound.",
     visual: "growth",
     icon: "orbit",
@@ -49,7 +49,7 @@ export const SERVICES: ServiceItem[] = [
   {
     index: "02",
     label: "FEATURED",
-    title: "AI & Automation",
+    title: "AI and automation",
     description: "Custom AI apps, chatbots, and workflows that ship.",
     visual: "ai",
     icon: "chip",
@@ -61,7 +61,7 @@ export const SERVICES: ServiceItem[] = [
   {
     index: "03",
     label: "PILLAR",
-    title: "Technology & Transformation",
+    title: "Technology and transformation",
     description: "Modernize the stack growth actually runs on.",
     visual: "technology",
     icon: "cloud",
@@ -72,7 +72,7 @@ export const SERVICES: ServiceItem[] = [
   {
     index: "04",
     label: "CAPABILITY",
-    title: "Cloud Computing",
+    title: "Cloud computing",
     description: "Secure, scalable cloud infrastructure built for modern operations.",
     visual: "cloud",
     icon: "cloud",
@@ -94,7 +94,7 @@ export const SERVICES: ServiceItem[] = [
   {
     index: "06",
     label: "CAPABILITY",
-    title: "Web & Digital",
+    title: "Web and digital",
     description: "Marketing sites and landing pages engineered to convert.",
     visual: "web",
     icon: "window",

@@ -69,7 +69,7 @@ export const AI_INPUTS: WorkflowInput[] = [
   },
   {
     id: "chat",
-    title: "Chat Requests",
+    title: "Chat requests",
     subtitle: "Context switching",
     icon: "chat",
     outputId: "workflows",
@@ -93,7 +93,7 @@ export const AI_INPUTS: WorkflowInput[] = [
   },
   {
     id: "data",
-    title: "Data Sources",
+    title: "Data sources",
     subtitle: "Siloed systems",
     icon: "database",
     outputId: "sync",
@@ -104,37 +104,37 @@ export const AI_INPUTS: WorkflowInput[] = [
 export const AI_OUTPUTS: WorkflowOutput[] = [
   {
     id: "workflows",
-    title: "Automated Workflows",
+    title: "Automated workflows",
     subtitle: "End-to-end execution",
     icon: "workflow",
   },
   {
     id: "responses",
-    title: "Smart Responses",
+    title: "Smart responses",
     subtitle: "AI-powered replies",
     icon: "response",
   },
   {
     id: "insights",
-    title: "Real-Time Insights",
+    title: "Real-time insights",
     subtitle: "Signals & summaries",
     icon: "insight",
   },
   {
     id: "sync",
-    title: "Synchronized Systems",
+    title: "Synchronized systems",
     subtitle: "Two-way updates",
     icon: "sync",
   },
   {
     id: "approvals-out",
-    title: "Approvals Automated",
+    title: "Approvals automated",
     subtitle: "Rules & routing",
     icon: "check-route",
   },
   {
     id: "pipelines",
-    title: "Clean Data Pipelines",
+    title: "Clean data pipelines",
     subtitle: "Validated & connected",
     icon: "pipeline",
   },

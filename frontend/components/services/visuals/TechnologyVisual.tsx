@@ -57,24 +57,24 @@ export default function TechnologyVisual({
       {/* Left server racks */}
       <g className="service-visual__racks" transform="translate(28 48)">
         <g className="service-visual__rack">
-          <rect width="36" height="104" rx="3" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.35)" strokeWidth="1.1" />
-          <rect x="6" y="10" width="24" height="8" rx="1" fill="#93C5FD" fillOpacity="0.45" />
-          <rect x="6" y="26" width="24" height="8" rx="1" fill="rgba(255,255,255,0.18)" />
-          <rect x="6" y="42" width="24" height="8" rx="1" fill="#60A5FA" fillOpacity="0.35" />
-          <rect x="6" y="58" width="24" height="8" rx="1" fill="rgba(255,255,255,0.18)" />
-          <rect x="6" y="74" width="24" height="8" rx="1" fill="#BFDBFE" fillOpacity="0.4" />
+          <rect width="36" height="104" rx="3" fill="rgba(var(--cream-rgb), 0.04)" stroke="rgba(var(--cream-rgb), 0.35)" strokeWidth="1.1" />
+          <rect x="6" y="10" width="24" height="8" rx="1" fill="rgb(var(--cream-rgb))" fillOpacity="0.45" />
+          <rect x="6" y="26" width="24" height="8" rx="1" fill="rgba(var(--cream-rgb), 0.18)" />
+          <rect x="6" y="42" width="24" height="8" rx="1" fill="rgb(var(--cream-rgb))" fillOpacity="0.35" />
+          <rect x="6" y="58" width="24" height="8" rx="1" fill="rgba(var(--cream-rgb), 0.18)" />
+          <rect x="6" y="74" width="24" height="8" rx="1" fill="rgb(var(--cream-rgb))" fillOpacity="0.4" />
         </g>
         <g className="service-visual__rack" transform="translate(48 12)" style={{ animationDelay: "0.4s" }}>
-          <rect width="30" height="92" rx="3" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.28)" strokeWidth="1" />
-          <rect x="5" y="10" width="20" height="7" rx="1" fill="rgba(255,255,255,0.2)" />
-          <rect x="5" y="24" width="20" height="7" rx="1" fill="#93C5FD" fillOpacity="0.4" />
-          <rect x="5" y="38" width="20" height="7" rx="1" fill="rgba(255,255,255,0.16)" />
-          <rect x="5" y="52" width="20" height="7" rx="1" fill="#60A5FA" fillOpacity="0.35" />
+          <rect width="30" height="92" rx="3" fill="rgba(var(--cream-rgb), 0.03)" stroke="rgba(var(--cream-rgb), 0.28)" strokeWidth="1" />
+          <rect x="5" y="10" width="20" height="7" rx="1" fill="rgba(var(--cream-rgb), 0.2)" />
+          <rect x="5" y="24" width="20" height="7" rx="1" fill="rgb(var(--cream-rgb))" fillOpacity="0.4" />
+          <rect x="5" y="38" width="20" height="7" rx="1" fill="rgba(var(--cream-rgb), 0.16)" />
+          <rect x="5" y="52" width="20" height="7" rx="1" fill="rgb(var(--cream-rgb))" fillOpacity="0.35" />
         </g>
       </g>
 
       {/* Connecting paths */}
-      <g className="service-visual__paths" stroke="rgba(255,255,255,0.3)" strokeWidth="1" fill="none">
+      <g className="service-visual__paths" stroke="rgba(var(--cream-rgb), 0.3)" strokeWidth="1" fill="none">
         <path className="service-visual__path" d="M112 100 H138" />
         <path className="service-visual__path" d="M182 100 H208" style={{ animationDelay: "0.3s" }} />
         <path className="service-visual__path" d="M160 72 V48" style={{ animationDelay: "0.6s" }} />
@@ -82,15 +82,15 @@ export default function TechnologyVisual({
 
       {/* Center cloud */}
       <g className="service-visual__cloud" transform="translate(160 100)">
-        <ellipse className="service-visual__glow" cx="0" cy="4" rx="38" ry="26" fill="#93C5FD" fillOpacity="0.12" />
+        <ellipse className="service-visual__glow" cx="0" cy="4" rx="38" ry="26" fill="rgb(var(--cream-rgb))" fillOpacity="0.12" />
         <path
           d="M-28 8c-8 0-14-6-14-13s6-13 14-13c2-10 12-16 22-14 6-8 18-8 24-1 10-2 18 6 16 15 8 1 14 8 12 15H-28z"
-          fill="#BFDBFE"
+          fill="rgb(var(--cream-rgb))"
           fillOpacity="0.1"
-          stroke="rgba(255,255,255,0.55)"
+          stroke="rgba(var(--cream-rgb), 0.55)"
           strokeWidth="1.25"
         />
-        <circle cx="0" cy="2" r="4" fill="#60A5FA" fillOpacity="0.7" />
+        <circle cx="0" cy="2" r="4" fill="rgb(var(--cream-rgb))" fillOpacity="0.7" />
       </g>
 
       {/* Right 3x3 module grid */}
@@ -105,9 +105,9 @@ export default function TechnologyVisual({
               width="20"
               height="20"
               rx="3"
-              fill={col === 1 && row === 1 ? "#60A5FA" : "rgba(255,255,255,0.05)"}
+              fill={col === 1 && row === 1 ? "rgb(var(--cream-rgb))" : "rgba(var(--cream-rgb), 0.05)"}
               fillOpacity={col === 1 && row === 1 ? 0.35 : 1}
-              stroke="rgba(255,255,255,0.35)"
+              stroke="rgba(var(--cream-rgb), 0.35)"
               strokeWidth="1"
               style={{ animationDelay: `${(row * 3 + col) * 0.12}s` }}
             />

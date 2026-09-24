@@ -114,7 +114,8 @@ export default function ContactSection() {
               className="contact-editorial__support opacity-0"
             >
               Book a 30-minute discovery call. Custom proposal in 48 hours.
-              Built for US B2B teams investing $5K–$25K a month in growth.
+              Built for founders and revenue leaders across the United States,
+              the United Kingdom and the Gulf.
             </p>
 
             <p
@@ -130,9 +131,8 @@ export default function ContactSection() {
               className="contact-editorial__fit opacity-0"
             >
               <p>
-                <strong>Best fit:</strong> US B2B businesses ($2M–$50M), SaaS,
-                professional services, and home services, one partner across
-                every channel.
+                <strong>Best fit:</strong> real estate, insurance, SaaS,
+                e-commerce and professional services.
               </p>
             </div>
 

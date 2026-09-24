@@ -35,7 +35,7 @@ export default function CapabilitySpine({
         y1={SPINE_Y}
         x2={SPINE_X[6]}
         y2={SPINE_Y}
-        stroke="rgba(120,140,170,0.35)"
+        stroke="rgba(var(--muted-rgb), 0.35)"
         strokeWidth="1"
         initial={reduceMotion ? false : { opacity: 0 }}
         animate={drawn ? { opacity: 1 } : { opacity: 0 }}
@@ -44,7 +44,7 @@ export default function CapabilitySpine({
       <motion.path
         d={`M ${SPINE_X[0]} ${SPINE_Y} H ${SPINE_X[6]}`}
         fill="none"
-        stroke="#2563EB"
+        stroke="rgb(var(--accent-rgb))"
         strokeWidth="1.15"
         strokeLinecap="round"
         initial={reduceMotion ? false : { pathLength: 0, opacity: 0 }}
@@ -69,7 +69,7 @@ export default function CapabilitySpine({
             key={`conn-${conn.capability}`}
             d={conn.d}
             fill="none"
-            stroke={lit ? "#2563EB" : "rgba(100,120,150,0.2)"}
+            stroke={lit ? "rgb(var(--accent-rgb))" : "rgba(var(--muted-rgb), 0.2)"}
             strokeWidth={lit ? 1.05 : 0.7}
             opacity={drawn ? (lit ? 0.48 : 0.12) : 0}
             style={{
@@ -89,7 +89,7 @@ export default function CapabilitySpine({
             key={riser.capability}
             d={riser.d}
             fill="none"
-            stroke={lit ? STROKE.active : "rgba(100,120,150,0.2)"}
+            stroke={lit ? STROKE.active : "rgba(var(--muted-rgb), 0.2)"}
             strokeWidth={lit ? 1.05 : 0.7}
             strokeDasharray="2 4"
             initial={reduceMotion ? false : { pathLength: 0, opacity: 0 }}
@@ -128,17 +128,17 @@ export default function CapabilitySpine({
             }}
           >
             {primary && (
-              <circle r={11} fill="rgba(37,99,235,0.16)" />
+              <circle r={11} fill="rgba(var(--accent-rgb), 0.16)" />
             )}
             <circle
               r={primary ? 5.2 : 4.2}
-              fill={primary ? "#2563EB" : present ? "rgba(15,23,42,0.5)" : "transparent"}
+              fill={primary ? "rgb(var(--accent-rgb))" : present ? "rgba(var(--surface-rgb), 0.5)" : "transparent"}
               stroke={
                 primary
-                  ? "#3B82F6"
+                  ? "rgb(var(--accent-rgb))"
                   : present
-                    ? "rgba(140,149,165,0.4)"
-                    : "rgba(140,149,165,0.2)"
+                    ? "rgba(var(--muted-rgb), 0.4)"
+                    : "rgba(var(--muted-rgb), 0.2)"
               }
               strokeWidth={1.1}
               style={{
@@ -146,7 +146,7 @@ export default function CapabilitySpine({
                   "r 0.35s ease, fill 0.35s ease, stroke 0.35s ease",
               }}
             />
-            {primary && <circle r={1.7} fill="#F5F5F2" />}
+            {primary && <circle r={1.7} fill="rgb(var(--fg-rgb))" />}
           </g>
         );
       })}

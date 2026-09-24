@@ -75,7 +75,7 @@ export default function TestimonialsSection() {
         <header className="voices-header">
           <p
             data-voice-animate="eyebrow"
-            className="font-mono text-[0.68rem] font-medium tracking-[0.18em] text-[#3B82F6] uppercase opacity-0"
+            className="font-sans text-[0.68rem] font-medium tracking-[0.18em] text-[rgb(var(--accent-rgb))] uppercase opacity-0"
           >
             CLIENT VOICES / VERIFIED EXPERIENCE
           </p>
@@ -85,14 +85,14 @@ export default function TestimonialsSection() {
             className="voices-header__headline mt-3 opacity-0"
           >
             Results are better when{" "}
-            <span className="text-[#2563EB]">partnership works.</span>
+            <span className="text-[rgb(var(--accent-rgb))]">partnership works.</span>
           </h2>
           <p
             data-voice-animate="support"
             className="voices-header__support mt-4 opacity-0"
           >
-            Feedback from US B2B teams who replaced agency sprawl with one
-            partner, and kept the outcomes.
+            Feedback from founders and revenue leaders who replaced agency
+            sprawl with one partner, and kept the outcomes.
           </p>
         </header>
       </div>
@@ -110,7 +110,7 @@ export default function TestimonialsSection() {
           className="voices-trust mt-10 opacity-0 sm:mt-12"
         >
           <p className="voices-trust__line">
-            AI-native. One partner. Every channel. Founder-led premium.
+            Growth, engineered.
           </p>
           <ul className="voices-trust__meta">
             {TRUST_META.map((label) => (

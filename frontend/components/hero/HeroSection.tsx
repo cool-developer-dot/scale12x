@@ -32,17 +32,17 @@ export default function HeroSection() {
               <span className="hero-eyebrow__mark" aria-hidden="true">
                 ≫
               </span>
-              AI, cloud and cybersecurity engineered to scale
+              AI native growth studio
             </a>
 
             <h1 data-hero-animate className="hero-headline">
               <span className="hero-headline__lead">Growth,</span>{" "}
-              <em className="hero-headline__accent">amplified.</em>
+              <span className="hero-headline__accent">engineered.</span>
             </h1>
 
             <p data-hero-animate className="hero-support">
-              AI, cybersecurity, cloud and intelligent digital systems,
-              engineered to automate, secure and scale modern businesses.
+              Scale 12x builds the AI systems and growth infrastructure that
+              let businesses scale without scaling headcount.
             </p>
 
             <div data-hero-animate className="hero-actions">
@@ -51,7 +51,7 @@ export default function HeroSection() {
                 variant="secondary"
                 className="hero-primary-cta"
               >
-                Start Scaling
+                Start scaling
                 <span aria-hidden="true">→</span>
               </CursorFillCta>
               <CursorFillCta
