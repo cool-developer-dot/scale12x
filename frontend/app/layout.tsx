@@ -1,59 +1,64 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const geist = Geist({
-  variable: "--font-geist",
+/** Brand typeface: Inter for everything (Bold 700, Regular 400, Medium 500). */
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
   preload: true,
-  style: ["normal", "italic"],
+  style: ["normal"],
   adjustFontFallback: true,
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+/** Data face: JetBrains Mono Regular for figures, code and technical specifications. */
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
+  weight: "400",
   display: "swap",
   preload: false,
   adjustFontFallback: true,
 });
 
 const siteDescription =
-  "Growth, amplified. One partner. Every channel. Built on AI. Scale12x is the AI-native growth studio for US B2B teams investing $5K–$25K a month.";
+  "Growth, engineered. Scale 12x builds the AI systems and growth infrastructure that let businesses scale without scaling headcount.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://scale12x.com"),
   title: {
-    default: "Scale12x: AI-Native Growth Studio",
+    default: "Scale 12x: Growth, engineered.",
     template: "%s",
   },
   description: siteDescription,
-  applicationName: "Scale12x",
+  applicationName: "Scale 12x",
   keywords: [
-    "growth strategy",
+    "growth infrastructure",
     "AI automation",
-    "digital agency",
+    "AI agents",
+    "CRM architecture",
+    "revenue operations",
     "cloud computing",
     "cybersecurity",
     "web design",
     "SEO",
     "GEO",
   ],
-  authors: [{ name: "Scale12x" }],
-  creator: "Scale12x",
-  publisher: "Scale12x",
+  authors: [{ name: "Scale 12x" }],
+  creator: "Scale 12x",
+  publisher: "Scale 12x",
   openGraph: {
-    title: "Scale12x: AI-Native Growth Studio",
+    title: "Scale 12x: Growth, engineered.",
     description: siteDescription,
     type: "website",
     locale: "en_US",
     url: "https://scale12x.com",
-    siteName: "Scale12x",
+    siteName: "Scale 12x",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Scale12x: AI-Native Growth Studio",
+    title: "Scale 12x: Growth, engineered.",
     description: siteDescription,
   },
   robots: {
@@ -61,7 +66,21 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: [{ url: "/favicon.ico" }],
+    icon: [
+      {
+        url: "/brand/favicon-512.png",
+        type: "image/png",
+        sizes: "512x512",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/brand/favicon-dark-512.png",
+        type: "image/png",
+        sizes: "512x512",
+        media: "(prefers-color-scheme: dark)",
+      },
+    ],
+    apple: [{ url: "/brand/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   alternates: {
     canonical: "/",
@@ -70,10 +89,10 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: dark)", color: "#05070d" },
-    { media: "(prefers-color-scheme: light)", color: "#05070d" },
+    { media: "(prefers-color-scheme: light)", color: "#f5f2ed" },
+    { media: "(prefers-color-scheme: dark)", color: "#111111" },
   ],
-  colorScheme: "dark",
+  colorScheme: "light dark",
   width: "device-width",
   initialScale: 1,
 };
@@ -83,7 +102,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       data-scroll-behavior="smooth"
-      className={`${geist.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-[var(--color-bg-deep)] text-[var(--color-text)]">
         {children}

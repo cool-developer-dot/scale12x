@@ -9,11 +9,11 @@ import ServicesProcess from "@/components/services/process/ServicesProcess";
 const ProofSection = dynamic(() => import("@/components/proof/ProofSection"));
 
 export const metadata: Metadata = {
-  title: "Services: Scale12x",
+  title: "Services: Scale 12x",
   description:
     "One system. Every growth lever. Strategy, creative, technology and AI, connected into one operating model.",
   openGraph: {
-    title: "Services: Scale12x",
+    title: "Services: Scale 12x",
     description:
       "One system. Every growth lever. Strategy, creative, technology and AI, connected into one operating model.",
     type: "website",

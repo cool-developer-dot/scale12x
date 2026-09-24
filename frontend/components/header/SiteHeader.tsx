@@ -45,7 +45,7 @@ export default function SiteHeader() {
       className={`site-header${scrolled ? " is-scrolled" : ""}`}
     >
       <div className="site-header__inner">
-        <BrandLogo priority tone="light" />
+        <BrandLogo priority />
 
         <nav
           className="hero-nav hidden items-center lg:flex"
@@ -73,7 +73,7 @@ export default function SiteHeader() {
               variant="primary"
               className="site-header__cta h-10 px-5 text-[0.72rem] sm:h-11 sm:text-[0.8rem]"
             >
-              Start Scaling
+              Start scaling
             </CursorFillCta>
           </div>
           <MobileNav />

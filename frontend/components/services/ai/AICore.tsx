@@ -68,8 +68,8 @@ export default function AICore({
         width={136 * scale}
         height={compact ? 248 * scale : 286 * scale}
         rx={26 * scale}
-        fill="rgba(5,11,20,0.35)"
-        stroke="rgba(148,163,184,0.14)"
+        fill="rgba(var(--surface-rgb), 0.35)"
+        stroke="rgba(var(--muted-rgb), 0.14)"
         strokeWidth="1"
       />
       <rect
@@ -79,7 +79,7 @@ export default function AICore({
         height={compact ? 232 * scale : 270 * scale}
         rx={22 * scale}
         fill="none"
-        stroke="rgba(59,130,246,0.08)"
+        stroke="rgba(var(--accent-rgb), 0.08)"
         strokeWidth="0.75"
       />
 
@@ -89,7 +89,7 @@ export default function AICore({
         y={cy - 84 * scale}
         textAnchor="middle"
         className="ai-hero__core-label"
-        fill="#3B82F6"
+        fill="rgb(var(--accent-rgb))"
         fontSize={8.5}
         letterSpacing="0.2em"
       >
@@ -110,7 +110,7 @@ export default function AICore({
           cy={cy}
           r={rOuter}
           fill="none"
-          stroke="rgba(59,130,246,0.28)"
+          stroke="rgba(var(--accent-rgb), 0.28)"
           strokeWidth="0.9"
           strokeDasharray="2 7"
         />
@@ -129,7 +129,7 @@ export default function AICore({
           rx={rMid + 4}
           ry={rMid - 6}
           fill="none"
-          stroke="rgba(148,163,184,0.18)"
+          stroke="rgba(var(--muted-rgb), 0.18)"
           strokeWidth="0.7"
           strokeDasharray="1.2 6"
         />
@@ -141,7 +141,7 @@ export default function AICore({
         cy={cy}
         r={rMid}
         fill="none"
-        stroke="rgba(210,225,245,0.16)"
+        stroke="rgba(var(--fg-rgb), 0.16)"
         strokeWidth="0.85"
       />
       <motion.circle
@@ -149,12 +149,12 @@ export default function AICore({
         cy={cy}
         r={rInner + 6}
         fill="none"
-        stroke="rgba(59,130,246,0.45)"
+        stroke="rgba(var(--accent-rgb), 0.45)"
         strokeWidth="1"
         animate={{
           r: pulse ? (rInner + 6) * 1.03 : rInner + 6,
           rotate: pulse ? 4 : 0,
-          stroke: pulse ? "rgba(96,165,250,0.75)" : "rgba(59,130,246,0.45)",
+          stroke: pulse ? "rgba(var(--accent-rgb), 0.75)" : "rgba(var(--accent-rgb), 0.45)",
         }}
         transition={{ duration: 0.42, ease: "easeOut" }}
         style={{ transformOrigin: `${cx}px ${cy}px` }}
@@ -171,14 +171,14 @@ export default function AICore({
       >
         <polygon
           points={hex(rInner)}
-          fill="rgba(37,99,235,0.16)"
-          stroke={pulse ? "rgba(147,197,253,0.85)" : "rgba(96,165,250,0.55)"}
+          fill="rgba(var(--accent-rgb), 0.16)"
+          stroke={pulse ? "rgba(var(--accent-rgb), 0.85)" : "rgba(var(--accent-rgb), 0.55)"}
           strokeWidth="1.15"
         />
         <polygon
           points={hex(rInner * 0.58)}
-          fill="rgba(37,99,235,0.28)"
-          stroke="rgba(226,232,240,0.45)"
+          fill="rgba(var(--accent-rgb), 0.28)"
+          stroke="rgba(var(--fg-rgb), 0.45)"
           strokeWidth="0.9"
         />
         {/* Network spokes */}
@@ -191,20 +191,20 @@ export default function AICore({
               y1={cy}
               x2={cx + Math.cos(a) * rInner * 0.92}
               y2={cy + Math.sin(a) * rInner * 0.92}
-              stroke="rgba(96,165,250,0.35)"
+              stroke="rgba(var(--accent-rgb), 0.35)"
               strokeWidth="0.65"
             />
           );
         })}
-        <circle cx={cx} cy={cy} r={3.2} fill="#2563EB" />
-        <circle cx={cx} cy={cy} r={1.4} fill="#F8FAFC" />
+        <circle cx={cx} cy={cy} r={3.2} fill="rgb(var(--accent-rgb))" />
+        <circle cx={cx} cy={cy} r={1.4} fill="rgb(var(--fg-rgb))" />
       </motion.g>
 
       <text
         x={cx}
         y={cy + rInner * 0.72}
         textAnchor="middle"
-        fill="rgba(248,250,252,0.92)"
+        fill="rgba(var(--fg-rgb), 0.92)"
         fontSize={compact ? 7.5 : 8.5}
         fontWeight={500}
         letterSpacing="0.16em"
@@ -226,11 +226,11 @@ export default function AICore({
                 cx={cx - 42}
                 cy={y}
                 r={3}
-                fill={lit ? "#3B82F6" : passed ? "rgba(59,130,246,0.45)" : "transparent"}
+                fill={lit ? "rgb(var(--accent-rgb))" : passed ? "rgba(var(--accent-rgb), 0.45)" : "transparent"}
                 stroke={
                   lit || passed
-                    ? "rgba(96,165,250,0.8)"
-                    : "rgba(148,163,184,0.35)"
+                    ? "rgba(var(--accent-rgb), 0.8)"
+                    : "rgba(var(--muted-rgb), 0.35)"
                 }
                 strokeWidth="1"
               />
@@ -240,18 +240,18 @@ export default function AICore({
                   y1={y + 4}
                   x2={cx - 42}
                   y2={y + stackGap - 4}
-                  stroke="rgba(148,163,184,0.2)"
+                  stroke="rgba(var(--muted-rgb), 0.2)"
                   strokeWidth="0.75"
                 />
               )}
               <text
                 x={cx - 30}
                 y={y + 3.5}
-                fill={lit ? "#F8FAFC" : passed ? "#94A3B8" : "#64748B"}
+                fill={lit ? "rgb(var(--fg-rgb))" : passed ? "rgb(var(--muted-rgb))" : "rgb(var(--muted-rgb))"}
                 fontSize={9}
                 letterSpacing="0.16em"
                 style={{
-                  fontFamily: "var(--font-geist-mono), ui-monospace, monospace",
+                  fontFamily: "var(--font-jetbrains-mono), ui-monospace, monospace",
                   textTransform: "uppercase",
                 }}
               >

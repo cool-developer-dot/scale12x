@@ -196,16 +196,16 @@ export default function ServiceSystemVisual({
             <stop
               offset="0%"
               stopColor={
-                neutral ? "rgba(148,163,184,0.18)" : "rgba(37,99,235,0.22)"
+                neutral ? "rgba(var(--muted-rgb), 0.18)" : "rgba(var(--accent-rgb), 0.22)"
               }
             />
             <stop
               offset="55%"
               stopColor={
-                neutral ? "rgba(148,163,184,0.05)" : "rgba(37,99,235,0.06)"
+                neutral ? "rgba(var(--muted-rgb), 0.05)" : "rgba(var(--accent-rgb), 0.06)"
               }
             />
-            <stop offset="100%" stopColor="rgba(37,99,235,0)" />
+            <stop offset="100%" stopColor="rgba(var(--accent-rgb), 0)" />
           </radialGradient>
         </defs>
 
@@ -234,10 +234,10 @@ export default function ServiceSystemVisual({
               !reduceMotion;
             const travelDur = signal?.duration ?? 1.1;
             const travelStroke = neutral
-              ? "#E2E8F0"
+              ? "rgb(var(--fg-rgb))"
               : travelingOut
-                ? "#3B82F6"
-                : "#60A5FA";
+                ? "rgb(var(--accent-rgb))"
+                : "rgb(var(--accent-rgb))";
 
             return (
               <g key={r.id}>

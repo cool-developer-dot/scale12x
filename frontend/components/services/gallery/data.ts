@@ -24,7 +24,7 @@ export const CAPABILITIES: CapabilityItem[] = [
   {
     id: "01",
     visual: "growth",
-    title: "Growth Strategy",
+    title: "Growth strategy",
     promise: "Positioning, channels, and priorities that compound.",
     status: "Strategy · Positioning · Direction",
     href: "/services/growth-strategy",
@@ -32,7 +32,7 @@ export const CAPABILITIES: CapabilityItem[] = [
   {
     id: "02",
     visual: "ai",
-    title: "AI & Automation",
+    title: "AI and automation",
     promise: "Custom AI apps, chatbots, and workflows that ship.",
     status: "AI · Systems · Automation",
     href: "/services/ai-automation",
@@ -41,7 +41,7 @@ export const CAPABILITIES: CapabilityItem[] = [
   {
     id: "03",
     visual: "technology",
-    title: "Technology & Transformation",
+    title: "Technology and transformation",
     promise: "Modernize the stack growth actually runs on.",
     status: "Infrastructure · Systems · Scale",
     href: "/services/technology-transformation",
@@ -49,7 +49,7 @@ export const CAPABILITIES: CapabilityItem[] = [
   {
     id: "04",
     visual: "cloud",
-    title: "Cloud Computing",
+    title: "Cloud computing",
     promise: "Secure, scalable cloud infrastructure built for modern operations.",
     status: "Architecture · Migration · Reliability",
     href: "/services/cloud-computing",
@@ -66,7 +66,7 @@ export const CAPABILITIES: CapabilityItem[] = [
   {
     id: "06",
     visual: "web",
-    title: "Web & Digital",
+    title: "Web and digital",
     promise: "Marketing sites and landing pages engineered to convert.",
     status: "UX · Product · Conversion",
     href: "/services/web-digital",

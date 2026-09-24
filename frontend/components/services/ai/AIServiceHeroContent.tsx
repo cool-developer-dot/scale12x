@@ -61,7 +61,7 @@ export default function AIServiceHeroContent({
         animate={show ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }}
         transition={{ duration: 0.55, ease, delay: 0.48 }}
       >
-        Custom AI apps, chatbots, and production workflows, AI-native, not
+        Custom AI apps, chatbots, and production workflows, AI native, not
         bolted on. Ships in weeks.
       </motion.p>
 

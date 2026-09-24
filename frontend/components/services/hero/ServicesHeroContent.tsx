@@ -46,7 +46,7 @@ export default function ServicesHeroContent({
         animate={show ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
         transition={{ duration: 0.55, ease, delay: 0.18 }}
       >
-        AI-native execution across strategy, creative, technology and growth,
+        AI native execution across strategy, creative, technology and growth,
         one operating model, not five agencies.
       </motion.p>
     </div>

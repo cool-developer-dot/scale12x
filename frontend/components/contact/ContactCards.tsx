@@ -22,7 +22,7 @@ type ContactCardItem = {
 const CARDS: ContactCardItem[] = [
   {
     id: "new-business",
-    title: "New Business",
+    title: "New business",
     icon: MailIcon,
     href: `mailto:${CONTACT_EMAIL}`,
     ariaLabel: `Email ${CONTACT_EMAIL}`,
@@ -30,7 +30,7 @@ const CARDS: ContactCardItem[] = [
   },
   {
     id: "book",
-    title: "Book Directly",
+    title: "Book directly",
     icon: CalendarIcon,
     href: "/book",
     ariaLabel: "Book a strategy call",
@@ -42,13 +42,13 @@ const CARDS: ContactCardItem[] = [
   },
   {
     id: "operating",
-    title: "Operating Across",
+    title: "Operating across",
     icon: GlobeIcon,
     body: <span className="contact-card__meta">{OPERATING_CITIES}</span>,
   },
   {
     id: "response",
-    title: "Response Time",
+    title: "Response time",
     icon: ClockIcon,
     body: (
       <span className="contact-card__meta">Usually within 1 business day</span>

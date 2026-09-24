@@ -75,7 +75,7 @@ export default function ProcessSpine({
       {/* Base path */}
       <path
         d={pathD}
-        stroke="rgba(110,130,160,0.30)"
+        stroke="rgba(var(--muted-rgb), 0.3)"
         strokeWidth="1"
         strokeLinecap="round"
         className={drawn ? "is-drawn" : undefined}
@@ -85,7 +85,7 @@ export default function ProcessSpine({
       {!reduceMotion && drawn && (
         <path
           d={`M ${illumStart} ${y} H ${Math.max(illumStart + 8, illumEnd)}`}
-          stroke="#3B82F6"
+          stroke="rgb(var(--accent-rgb))"
           strokeWidth="1.6"
           strokeLinecap="round"
           opacity="0.85"
@@ -96,7 +96,7 @@ export default function ProcessSpine({
       {reduceMotion && drawn && (
         <path
           d={`M ${SPINE.startX} ${y} H ${SPINE.nodes[3]}`}
-          stroke="#2563EB"
+          stroke="rgb(var(--accent-rgb))"
           strokeWidth="1.4"
           strokeLinecap="round"
           opacity="0.55"
@@ -110,21 +110,21 @@ export default function ProcessSpine({
         return (
           <g key={i} transform={`translate(${x} ${y})`}>
             {primary && !reduceMotion && (
-              <circle r="11" fill="rgba(37,99,235,0.16)" />
+              <circle r="11" fill="rgba(var(--accent-rgb), 0.16)" />
             )}
             <circle
               r={primary ? 8 : 7}
-              fill="rgba(8,14,28,0.9)"
+              fill="rgba(var(--surface-rgb), 0.9)"
               stroke={
-                lit ? (primary ? "#3B82F6" : "rgba(100,130,180,0.55)") : "rgba(100,120,150,0.35)"
+                lit ? (primary ? "rgb(var(--accent-rgb))" : "rgba(var(--accent-rgb), 0.55)") : "rgba(var(--muted-rgb), 0.35)"
               }
               strokeWidth="1.15"
             />
             <circle
               r={primary ? 3.4 : 2.6}
-              fill={primary ? "#E8F1FF" : lit ? "rgba(220,230,245,0.75)" : "rgba(140,149,165,0.45)"}
+              fill={primary ? "rgb(var(--fg-rgb))" : lit ? "rgba(var(--fg-rgb), 0.75)" : "rgba(var(--muted-rgb), 0.45)"}
             />
-            {primary && <circle r="1.3" fill="#2563EB" />}
+            {primary && <circle r="1.3" fill="rgb(var(--accent-rgb))" />}
           </g>
         );
       })}
@@ -132,7 +132,7 @@ export default function ProcessSpine({
       {/* Traveling signal */}
       {signal && !reduceMotion && drawn && (
         <g key={signal.key}>
-          <circle r="7" fill="rgba(59,130,246,0.22)">
+          <circle r="7" fill="rgba(var(--accent-rgb), 0.22)">
             <animateMotion
               dur={`${signal.duration}s`}
               fill="freeze"
@@ -149,7 +149,7 @@ export default function ProcessSpine({
               fill="freeze"
             />
           </circle>
-          <circle r="3.6" fill="#E8F1FF">
+          <circle r="3.6" fill="rgb(var(--fg-rgb))">
             <animateMotion
               dur={`${signal.duration}s`}
               fill="freeze"
@@ -205,7 +205,7 @@ function VerticalSpine({
     >
       <path
         d={pathD}
-        stroke="rgba(110,130,160,0.30)"
+        stroke="rgba(var(--muted-rgb), 0.3)"
         strokeWidth="1"
         strokeLinecap="round"
       />
@@ -213,7 +213,7 @@ function VerticalSpine({
       {!reduceMotion && drawn && (
         <path
           d={`M ${x} ${illumStart} V ${Math.max(illumStart + 8, illumEnd)}`}
-          stroke="#3B82F6"
+          stroke="rgb(var(--accent-rgb))"
           strokeWidth="1.6"
           strokeLinecap="round"
           opacity="0.85"
@@ -226,17 +226,17 @@ function VerticalSpine({
         return (
           <g key={i} transform={`translate(${x} ${ny})`}>
             {primary && !reduceMotion && (
-              <circle r="10" fill="rgba(37,99,235,0.16)" />
+              <circle r="10" fill="rgba(var(--accent-rgb), 0.16)" />
             )}
             <circle
               r={primary ? 7.5 : 6.5}
-              fill="rgba(8,14,28,0.9)"
-              stroke={primary ? "#3B82F6" : "rgba(100,120,150,0.4)"}
+              fill="rgba(var(--surface-rgb), 0.9)"
+              stroke={primary ? "rgb(var(--accent-rgb))" : "rgba(var(--muted-rgb), 0.4)"}
               strokeWidth="1.1"
             />
             <circle
               r={primary ? 3.2 : 2.4}
-              fill={primary ? "#E8F1FF" : lit ? "rgba(220,230,245,0.7)" : "rgba(140,149,165,0.4)"}
+              fill={primary ? "rgb(var(--fg-rgb))" : lit ? "rgba(var(--fg-rgb), 0.7)" : "rgba(var(--muted-rgb), 0.4)"}
             />
           </g>
         );
@@ -244,7 +244,7 @@ function VerticalSpine({
 
       {signal && !reduceMotion && drawn && (
         <g key={signal.key}>
-          <circle r="6.5" fill="rgba(59,130,246,0.22)">
+          <circle r="6.5" fill="rgba(var(--accent-rgb), 0.22)">
             <animateMotion
               dur={`${signal.duration}s`}
               fill="freeze"
@@ -261,7 +261,7 @@ function VerticalSpine({
               fill="freeze"
             />
           </circle>
-          <circle r="3.2" fill="#E8F1FF">
+          <circle r="3.2" fill="rgb(var(--fg-rgb))">
             <animateMotion
               dur={`${signal.duration}s`}
               fill="freeze"

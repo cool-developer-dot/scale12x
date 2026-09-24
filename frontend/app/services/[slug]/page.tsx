@@ -34,7 +34,7 @@ export async function generateMetadata({
 }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const config = getServiceConfig(slug);
-  if (!config) return { title: "Services: Scale12x" };
+  if (!config) return { title: "Services: Scale 12x" };
   return {
     title: config.seoTitle,
     description: config.seoDescription,

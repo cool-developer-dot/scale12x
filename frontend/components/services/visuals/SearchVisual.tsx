@@ -55,28 +55,28 @@ export default function SearchVisual({ active = false }: SearchVisualProps) {
       `}</style>
 
       {/* Concentric rings */}
-      <g className="service-visual__rings" stroke="rgba(255,255,255,0.2)" strokeWidth="1" fill="none">
+      <g className="service-visual__rings" stroke="rgba(var(--cream-rgb), 0.2)" strokeWidth="1" fill="none">
         <circle className="service-visual__ring" cx="140" cy="90" r="28" />
-        <circle className="service-visual__ring" cx="140" cy="90" r="48" stroke="rgba(255,255,255,0.28)" style={{ animationDelay: "0.4s" }} />
-        <circle className="service-visual__orbit service-visual__orbit--spin" cx="140" cy="90" r="68" strokeDasharray="2 6" stroke="rgba(255,255,255,0.22)" />
+        <circle className="service-visual__ring" cx="140" cy="90" r="48" stroke="rgba(var(--cream-rgb), 0.28)" style={{ animationDelay: "0.4s" }} />
+        <circle className="service-visual__orbit service-visual__orbit--spin" cx="140" cy="90" r="68" strokeDasharray="2 6" stroke="rgba(var(--cream-rgb), 0.22)" />
       </g>
 
       {/* Magnifying glass */}
       <g className="service-visual__glass" transform="translate(140 90)">
         <circle
           r="22"
-          fill="#BFDBFE"
+          fill="rgb(var(--cream-rgb))"
           fillOpacity="0.1"
-          stroke="rgba(255,255,255,0.6)"
+          stroke="rgba(var(--cream-rgb), 0.6)"
           strokeWidth="2"
         />
-        <circle r="8" fill="#93C5FD" fillOpacity="0.35" stroke="rgba(255,255,255,0.35)" strokeWidth="1" />
+        <circle r="8" fill="rgb(var(--cream-rgb))" fillOpacity="0.35" stroke="rgba(var(--cream-rgb), 0.35)" strokeWidth="1" />
         <line
           x1="16"
           y1="16"
           x2="30"
           y2="30"
-          stroke="rgba(255,255,255,0.65)"
+          stroke="rgba(var(--cream-rgb), 0.65)"
           strokeWidth="3.5"
           strokeLinecap="round"
         />
@@ -85,25 +85,25 @@ export default function SearchVisual({ active = false }: SearchVisualProps) {
       {/* Orbit nodes with labels */}
       <g
         className="service-visual__satellites"
-        fontFamily="var(--font-geist), system-ui, sans-serif"
+        fontFamily="var(--font-inter), system-ui, sans-serif"
         fontSize="7"
         letterSpacing="0.06em"
-        fill="rgba(255,255,255,0.7)"
+        fill="rgba(var(--cream-rgb), 0.7)"
       >
         <g className="service-visual__node" transform="translate(140 22)">
-          <circle r="4.5" fill="#60A5FA" fillOpacity="0.55" stroke="rgba(255,255,255,0.65)" strokeWidth="1" />
+          <circle r="4.5" fill="rgb(var(--cream-rgb))" fillOpacity="0.55" stroke="rgba(var(--cream-rgb), 0.65)" strokeWidth="1" />
           <text textAnchor="middle" y="-9">SEARCH</text>
         </g>
         <g className="service-visual__node" transform="translate(208 90)" style={{ animationDelay: "0.4s" }}>
-          <circle r="4.5" fill="#93C5FD" fillOpacity="0.5" stroke="rgba(255,255,255,0.65)" strokeWidth="1" />
+          <circle r="4.5" fill="rgb(var(--cream-rgb))" fillOpacity="0.5" stroke="rgba(var(--cream-rgb), 0.65)" strokeWidth="1" />
           <text textAnchor="start" x="9" y="3">AUTHORITY</text>
         </g>
         <g className="service-visual__node" transform="translate(140 158)" style={{ animationDelay: "0.8s" }}>
-          <circle r="4.5" fill="#BFDBFE" fillOpacity="0.55" stroke="rgba(255,255,255,0.65)" strokeWidth="1" />
+          <circle r="4.5" fill="rgb(var(--cream-rgb))" fillOpacity="0.55" stroke="rgba(var(--cream-rgb), 0.65)" strokeWidth="1" />
           <text textAnchor="middle" y="14">DISCOVERY</text>
         </g>
         <g className="service-visual__node" transform="translate(72 90)" style={{ animationDelay: "1.2s" }}>
-          <circle r="4.5" fill="#60A5FA" fillOpacity="0.5" stroke="rgba(255,255,255,0.65)" strokeWidth="1" />
+          <circle r="4.5" fill="rgb(var(--cream-rgb))" fillOpacity="0.5" stroke="rgba(var(--cream-rgb), 0.65)" strokeWidth="1" />
           <text textAnchor="end" x="-9" y="3">AI ANSWERS</text>
         </g>
       </g>

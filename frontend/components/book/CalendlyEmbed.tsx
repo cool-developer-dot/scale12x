@@ -97,7 +97,7 @@ export default function CalendlyEmbed() {
 
       <iframe
         ref={frameRef}
-        title="Schedule a strategy call with Scale12x"
+        title="Schedule a strategy call with Scale 12x"
         src={embedUrl}
         className="book-calendly__iframe"
         loading="eager"

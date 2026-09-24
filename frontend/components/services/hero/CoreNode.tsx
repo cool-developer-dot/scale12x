@@ -56,7 +56,7 @@ export default function CoreNode({
         cy={CORE.y}
         r={72}
         fill="none"
-        stroke="rgba(90,115,150,0.10)"
+        stroke="rgba(var(--muted-rgb), 0.1)"
         strokeWidth="0.65"
       />
 
@@ -74,7 +74,7 @@ export default function CoreNode({
             cy={CORE.y}
             r={56}
             fill="none"
-            stroke="rgba(59,130,246,0.28)"
+            stroke="rgba(var(--accent-rgb), 0.28)"
             strokeWidth="0.85"
             strokeDasharray="1.4 5.5"
             opacity={0.9}
@@ -94,7 +94,7 @@ export default function CoreNode({
             cy={CORE.y}
             r={46}
             fill="none"
-            stroke="rgba(100,130,180,0.14)"
+            stroke="rgba(var(--accent-rgb), 0.14)"
             strokeWidth="0.65"
             strokeDasharray="1 7"
             opacity={0.75}
@@ -108,7 +108,7 @@ export default function CoreNode({
         cy={CORE.y}
         r={38}
         fill="none"
-        stroke="rgba(210,225,245,0.22)"
+        stroke="rgba(var(--fg-rgb), 0.22)"
         strokeWidth="0.9"
       />
 
@@ -124,7 +124,7 @@ export default function CoreNode({
             y1={CORE.y + Math.sin(a) * r1}
             x2={CORE.x + Math.cos(a) * r2}
             y2={CORE.y + Math.sin(a) * r2}
-            stroke="rgba(140,149,165,0.32)"
+            stroke="rgba(var(--muted-rgb), 0.32)"
             strokeWidth="0.65"
           />
         );
@@ -135,13 +135,13 @@ export default function CoreNode({
         cx={CORE.x}
         cy={CORE.y}
         r={24}
-        fill="rgba(37,99,235,0.12)"
-        stroke="rgba(37,99,235,0.55)"
+        fill="rgba(var(--accent-rgb), 0.12)"
+        stroke="rgba(var(--accent-rgb), 0.55)"
         strokeWidth="1.05"
         animate={{
           r: pulse ? 25 : 24,
-          stroke: pulse ? "rgba(96,165,250,0.8)" : "rgba(37,99,235,0.55)",
-          fill: pulse ? "rgba(37,99,235,0.2)" : "rgba(37,99,235,0.12)",
+          stroke: pulse ? "rgba(var(--accent-rgb), 0.8)" : "rgba(var(--accent-rgb), 0.55)",
+          fill: pulse ? "rgba(var(--accent-rgb), 0.2)" : "rgba(var(--accent-rgb), 0.12)",
         }}
         transition={{ duration: pulse ? 0.42 : 0.35, ease: "easeOut" }}
       />
@@ -156,8 +156,8 @@ export default function CoreNode({
           cx={CORE.x}
           cy={CORE.y}
           r={16}
-          fill="#1a3fb0"
-          stroke={pulse ? "rgba(245,245,242,0.7)" : "rgba(245,245,242,0.5)"}
+          fill="rgb(var(--accent-rgb))"
+          stroke={pulse ? "rgba(var(--fg-rgb), 0.7)" : "rgba(var(--fg-rgb), 0.5)"}
           strokeWidth="1.05"
         />
       </motion.g>
@@ -167,7 +167,7 @@ export default function CoreNode({
         cx={CORE.x}
         cy={CORE.y}
         r={8}
-        fill="#2563EB"
+        fill="rgb(var(--accent-rgb))"
         animate={{ opacity: pulse ? 1 : 0.94 }}
         transition={{ duration: 0.28 }}
       />
@@ -176,7 +176,7 @@ export default function CoreNode({
         cx={CORE.x}
         cy={CORE.y}
         r={2.4}
-        fill="#F5F5F2"
+        fill="rgb(var(--fg-rgb))"
         animate={{ opacity: pulse ? 1 : 0.9 }}
         transition={{ duration: 0.28 }}
       />
