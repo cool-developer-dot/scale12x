@@ -9289,32 +9289,21 @@ main:has(.final-cta-section:last-child) + .site-footer {
   height: auto;
 }
 
-/* ─── Partner logos: monochrome, so the wall stays inside the two-colour rule ─── */
-.platform-item__logo,
+/* ─── Partner logos: full brand colour in the platforms band, monochrome in the hero diagram ─── */
+.platform-item__logo {
+  filter: none;
+  opacity: 1;
+}
+
 .hero-diagram__platform img {
   filter: brightness(0);
   opacity: 0.62;
 }
 
 @media (prefers-color-scheme: dark) {
-  .platform-item__logo,
   .hero-diagram__platform img {
     filter: brightness(0) invert(1);
     opacity: 0.66;
-  }
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .platform-item:hover .platform-item__logo {
-    filter: brightness(0);
-    opacity: 1;
-  }
-}
-
-@media (hover: hover) and (pointer: fine) and (prefers-color-scheme: dark) {
-  .platform-item:hover .platform-item__logo {
-    filter: brightness(0) invert(1);
-    opacity: 1;
   }
 }
 
