@@ -103,17 +103,17 @@ function AnchorDot({
 }) {
   const r = kind === "primary" ? 4.8 : kind === "secondary" ? 3.4 : 2;
   let fillColor = "transparent";
-  let stroke = "rgba(140,149,165,0.4)";
+  let stroke = "rgba(var(--muted-rgb), 0.4)";
   if (fill === "cobalt") {
-    fillColor = lit ? "#3B82F6" : "#2563EB";
-    stroke = "#3B82F6";
+    fillColor = lit ? "rgb(var(--accent-rgb))" : "rgb(var(--accent-rgb))";
+    stroke = "rgb(var(--accent-rgb))";
   } else if (fill === "white-ring") {
-    fillColor = "rgba(15,23,42,0.85)";
-    stroke = lit ? "#F5F5F2" : "rgba(210,225,245,0.6)";
+    fillColor = "rgba(var(--fg-rgb), 0.85)";
+    stroke = lit ? "rgb(var(--fg-rgb))" : "rgba(var(--fg-rgb), 0.6)";
   } else if (fill === "outline") {
-    stroke = lit ? "#2563EB" : "rgba(37,99,235,0.5)";
+    stroke = lit ? "rgb(var(--accent-rgb))" : "rgba(var(--accent-rgb), 0.5)";
   } else {
-    fillColor = "rgba(140,149,165,0.3)";
+    fillColor = "rgba(var(--muted-rgb), 0.3)";
     stroke = "transparent";
   }
 
@@ -339,9 +339,9 @@ export default function CapabilitySystem({
       >
         <defs>
           <radialGradient id="services-core-glow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="rgba(37,99,235,0.22)" />
-            <stop offset="55%" stopColor="rgba(37,99,235,0.06)" />
-            <stop offset="100%" stopColor="rgba(37,99,235,0)" />
+            <stop offset="0%" stopColor="rgba(var(--accent-rgb), 0.22)" />
+            <stop offset="55%" stopColor="rgba(var(--accent-rgb), 0.06)" />
+            <stop offset="100%" stopColor="rgba(var(--accent-rgb), 0)" />
           </radialGradient>
         </defs>
 
@@ -354,7 +354,7 @@ export default function CapabilitySystem({
             cx={CORE.x}
             cy={CORE.y}
             r={density === "mobile" ? 100 : 130}
-            stroke="rgba(90,115,150,0.09)"
+            stroke="rgba(var(--muted-rgb), 0.09)"
             strokeWidth="0.6"
             fill="none"
           />
@@ -363,7 +363,7 @@ export default function CapabilitySystem({
               cx={CORE.x}
               cy={CORE.y}
               r={168}
-              stroke="rgba(90,115,150,0.07)"
+              stroke="rgba(var(--muted-rgb), 0.07)"
               strokeWidth="0.55"
               fill="none"
               strokeDasharray="2 11"
@@ -372,7 +372,7 @@ export default function CapabilitySystem({
           {/* Alignment ticks near core only — not full-span crosshairs */}
           <path
             d={`M ${CORE.x - 18} ${CORE.y} h 8 M ${CORE.x + 10} ${CORE.y} h 8 M ${CORE.x} ${CORE.y - 18} v 8 M ${CORE.x} ${CORE.y + 10} v 8`}
-            stroke="rgba(90,115,150,0.12)"
+            stroke="rgba(var(--muted-rgb), 0.12)"
             strokeWidth="0.65"
           />
         </motion.g>

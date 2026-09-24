@@ -424,10 +424,10 @@ export default function MobileNav() {
                     onClick={onNavigate}
                     className="mobile-nav-cta min-h-12 w-full px-6 text-[0.82rem] tracking-[0.16em] uppercase"
                   >
-                    Start Scaling ↗
+                    Start scaling ↗
                   </CursorFillCta>
-                  <p className="mt-4 text-center font-mono text-[0.6rem] font-medium tracking-[0.18em] text-[var(--color-muted)] uppercase">
-                    Scale12x · AI-Native Growth Studio
+                  <p className="mt-4 text-center font-sans text-[0.6rem] font-medium tracking-[0.18em] text-[var(--color-muted)] uppercase">
+                    Scale 12x · AI native growth studio
                   </p>
                 </div>
               </aside>

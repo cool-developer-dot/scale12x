@@ -4,12 +4,12 @@ export const OPERATING_CITIES =
   "London · New York · San Francisco · Dubai · Riyadh" as const;
 
 export const SERVICE_OPTIONS = [
-  "Growth Strategy",
-  "AI & Automation",
+  "Growth strategy",
+  "AI and automation",
   "Technology",
-  "Cloud Computing",
+  "Cloud computing",
   "Cybersecurity",
-  "Web & Digital",
+  "Web and digital",
 ] as const;
 
 export type ServiceOption = (typeof SERVICE_OPTIONS)[number];

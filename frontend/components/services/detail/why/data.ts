@@ -19,7 +19,7 @@ export const WHY_IT_MATTERS: Record<ServiceSlug, WhyItMattersConfig> = {
       },
     ],
     supportingCopy:
-      "Manual handoffs, disconnected tools, and repetitive decisions slow every cycle. AI-native systems remove work that should never need a human.",
+      "Manual handoffs, disconnected tools, and repetitive decisions slow every cycle. AI native systems remove work that should never need a human.",
     tensions: [
       {
         index: "01",

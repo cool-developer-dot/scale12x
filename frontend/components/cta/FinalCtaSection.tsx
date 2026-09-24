@@ -92,8 +92,8 @@ export default function FinalCtaSection() {
             </h2>
 
             <p data-final-cta="support" className="final-cta-panel__support opacity-0">
-              The next move is yours. Built for US B2B teams investing $5K–$25K
-              a month in growth.
+              The next move is yours. Built for founders and revenue leaders
+              across the United States, the United Kingdom and the Gulf.
             </p>
 
             <a
@@ -111,7 +111,7 @@ export default function FinalCtaSection() {
               href="/contact"
               className="final-cta-panel__primary h-14 min-w-[14.5rem] justify-center px-8 text-[0.95rem] sm:h-[3.75rem] sm:min-w-[15.5rem] sm:text-[1.02rem]"
             >
-              Start Scaling <span aria-hidden="true">↗</span>
+              Start scaling <span aria-hidden="true">↗</span>
             </CursorFillCta>
           </div>
         </div>

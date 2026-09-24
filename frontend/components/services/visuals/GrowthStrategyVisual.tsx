@@ -53,46 +53,46 @@ export default function GrowthStrategyVisual({
       `}</style>
 
       {/* Concentric radar rings */}
-      <g className="service-visual__orbits" stroke="rgba(255,255,255,0.18)" strokeWidth="1">
+      <g className="service-visual__orbits" stroke="rgba(var(--cream-rgb), 0.18)" strokeWidth="1">
         <circle cx="160" cy="100" r="28" />
-        <circle className="service-visual__orbit service-visual__orbit--fast service-visual__pulse" cx="160" cy="100" r="48" stroke="rgba(255,255,255,0.28)" />
+        <circle className="service-visual__orbit service-visual__orbit--fast service-visual__pulse" cx="160" cy="100" r="48" stroke="rgba(var(--cream-rgb), 0.28)" />
         <circle className="service-visual__orbit service-visual__orbit--slow" cx="160" cy="100" r="72" strokeDasharray="3 5" />
-        <circle cx="160" cy="100" r="96" stroke="rgba(255,255,255,0.12)" />
+        <circle cx="160" cy="100" r="96" stroke="rgba(var(--cream-rgb), 0.12)" />
       </g>
 
       {/* Crosshair guides */}
-      <g stroke="rgba(255,255,255,0.12)" strokeWidth="1">
+      <g stroke="rgba(var(--cream-rgb), 0.12)" strokeWidth="1">
         <line x1="160" y1="22" x2="160" y2="178" />
         <line x1="48" y1="100" x2="272" y2="100" />
       </g>
 
       {/* Central node */}
       <g className="service-visual__core">
-        <circle className="service-visual__pulse" cx="160" cy="100" r="14" fill="#BFDBFE" fillOpacity="0.25" stroke="rgba(255,255,255,0.55)" strokeWidth="1.25" />
-        <circle cx="160" cy="100" r="5" fill="#93C5FD" />
+        <circle className="service-visual__pulse" cx="160" cy="100" r="14" fill="rgb(var(--cream-rgb))" fillOpacity="0.25" stroke="rgba(var(--cream-rgb), 0.55)" strokeWidth="1.25" />
+        <circle cx="160" cy="100" r="5" fill="rgb(var(--cream-rgb))" />
       </g>
 
       {/* Satellite nodes */}
-      <g className="service-visual__satellites" fontFamily="var(--font-geist), system-ui, sans-serif" fontSize="7.5" fill="rgba(255,255,255,0.72)">
+      <g className="service-visual__satellites" fontFamily="var(--font-inter), system-ui, sans-serif" fontSize="7.5" fill="rgba(var(--cream-rgb), 0.72)">
         {/* Market Insights — top */}
         <g className="service-visual__node" transform="translate(160 28)">
-          <circle r="5.5" fill="#60A5FA" fillOpacity="0.55" stroke="rgba(255,255,255,0.7)" strokeWidth="1" />
-          <text textAnchor="middle" y="-10">Market Insights</text>
+          <circle r="5.5" fill="rgb(var(--cream-rgb))" fillOpacity="0.55" stroke="rgba(var(--cream-rgb), 0.7)" strokeWidth="1" />
+          <text textAnchor="middle" y="-10">Market insights</text>
         </g>
         {/* Positioning — right */}
         <g className="service-visual__node" transform="translate(256 100)" style={{ animationDelay: "0.4s" }}>
-          <circle r="5.5" fill="#93C5FD" fillOpacity="0.5" stroke="rgba(255,255,255,0.7)" strokeWidth="1" />
+          <circle r="5.5" fill="rgb(var(--cream-rgb))" fillOpacity="0.5" stroke="rgba(var(--cream-rgb), 0.7)" strokeWidth="1" />
           <text textAnchor="start" x="10" y="3">Positioning</text>
         </g>
         {/* Opportunity Mapping — bottom */}
         <g className="service-visual__node" transform="translate(160 172)" style={{ animationDelay: "0.8s" }}>
-          <circle r="5.5" fill="#BFDBFE" fillOpacity="0.55" stroke="rgba(255,255,255,0.7)" strokeWidth="1" />
-          <text textAnchor="middle" y="16">Opportunity Mapping</text>
+          <circle r="5.5" fill="rgb(var(--cream-rgb))" fillOpacity="0.55" stroke="rgba(var(--cream-rgb), 0.7)" strokeWidth="1" />
+          <text textAnchor="middle" y="16">Opportunity mapping</text>
         </g>
         {/* Growth Model — left */}
         <g className="service-visual__node" transform="translate(64 100)" style={{ animationDelay: "1.2s" }}>
-          <circle r="5.5" fill="#60A5FA" fillOpacity="0.5" stroke="rgba(255,255,255,0.7)" strokeWidth="1" />
-          <text textAnchor="end" x="-10" y="3">Growth Model</text>
+          <circle r="5.5" fill="rgb(var(--cream-rgb))" fillOpacity="0.5" stroke="rgba(var(--cream-rgb), 0.7)" strokeWidth="1" />
+          <text textAnchor="end" x="-10" y="3">Growth model</text>
         </g>
       </g>
     </svg>

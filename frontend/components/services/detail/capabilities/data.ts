@@ -12,7 +12,7 @@ export const CORE_CAPABILITIES: Record<ServiceSlug, CoreCapabilitiesConfig> = {
       {
         id: "ai-agents",
         index: "01",
-        title: "AI Agents",
+        title: "AI agents",
         description:
           "Design and deploy intelligent agents that can reason, act and assist across repeatable workflows.",
         metadata: ["AGENTS", "TOOLS", "MEMORY"],
@@ -23,7 +23,7 @@ export const CORE_CAPABILITIES: Record<ServiceSlug, CoreCapabilitiesConfig> = {
       {
         id: "workflow-automation",
         index: "02",
-        title: "Workflow Automation",
+        title: "Workflow automation",
         description:
           "Replace manual handoffs and repetitive steps with reliable automated workflows.",
         metadata: ["WORKFLOWS", "RULES", "APPROVALS"],
@@ -33,7 +33,7 @@ export const CORE_CAPABILITIES: Record<ServiceSlug, CoreCapabilitiesConfig> = {
       {
         id: "systems-integration",
         index: "03",
-        title: "Systems Integration",
+        title: "Systems integration",
         description:
           "Connect your apps, data and platforms into one coordinated operating layer.",
         metadata: ["APIs", "DATA", "PLATFORMS"],
@@ -43,7 +43,7 @@ export const CORE_CAPABILITIES: Record<ServiceSlug, CoreCapabilitiesConfig> = {
       {
         id: "intelligence-monitoring",
         index: "04",
-        title: "Intelligence & Monitoring",
+        title: "Intelligence & monitoring",
         description:
           "Turn fragmented information into usable insight and continuously improve system performance.",
         metadata: ["INSIGHTS", "MONITORING", "OPTIMIZATION"],
@@ -63,7 +63,7 @@ export const CORE_CAPABILITIES: Record<ServiceSlug, CoreCapabilitiesConfig> = {
       {
         id: "growth-architecture",
         index: "01",
-        title: "Growth Architecture",
+        title: "Growth architecture",
         description:
           "Define the priorities, systems and growth levers that give the business a clear path forward.",
         metadata: ["PRIORITIES", "ROADMAP", "GROWTH LEVERS"],
@@ -74,7 +74,7 @@ export const CORE_CAPABILITIES: Record<ServiceSlug, CoreCapabilitiesConfig> = {
       {
         id: "positioning-messaging",
         index: "02",
-        title: "Positioning & Messaging",
+        title: "Positioning & messaging",
         description:
           "Clarify how the business should be understood, differentiated and communicated in the market.",
         metadata: ["POSITIONING", "MESSAGE", "DIFFERENTIATION"],
@@ -84,7 +84,7 @@ export const CORE_CAPABILITIES: Record<ServiceSlug, CoreCapabilitiesConfig> = {
       {
         id: "gtm-strategy",
         index: "03",
-        title: "Go-To-Market Strategy",
+        title: "Go-to-market strategy",
         description:
           "Build a focused approach for reaching the right audience, channels and opportunities.",
         metadata: ["GTM", "CHANNELS", "AUDIENCE"],
@@ -94,7 +94,7 @@ export const CORE_CAPABILITIES: Record<ServiceSlug, CoreCapabilitiesConfig> = {
       {
         id: "funnel-measurement",
         index: "04",
-        title: "Funnel & Measurement",
+        title: "Funnel & measurement",
         description:
           "Design the journey, measurement model and feedback loops needed to improve growth decisions.",
         metadata: ["FUNNELS", "METRICS", "OPTIMIZATION"],
@@ -114,7 +114,7 @@ export const CORE_CAPABILITIES: Record<ServiceSlug, CoreCapabilitiesConfig> = {
       {
         id: "architecture-modernization",
         index: "01",
-        title: "Architecture Modernization",
+        title: "Architecture modernization",
         description:
           "Restructure legacy systems into a cleaner architecture built for change and scale.",
         metadata: ["ARCHITECTURE", "MODERNIZATION", "SCALE"],
@@ -125,7 +125,7 @@ export const CORE_CAPABILITIES: Record<ServiceSlug, CoreCapabilitiesConfig> = {
       {
         id: "systems-integration",
         index: "02",
-        title: "Systems Integration",
+        title: "Systems integration",
         description:
           "Connect applications, APIs and workflows into one reliable technology ecosystem.",
         metadata: ["APIs", "INTEGRATIONS", "SYSTEMS"],
@@ -135,7 +135,7 @@ export const CORE_CAPABILITIES: Record<ServiceSlug, CoreCapabilitiesConfig> = {
       {
         id: "cloud-infrastructure",
         index: "03",
-        title: "Cloud & Infrastructure",
+        title: "Cloud & infrastructure",
         description:
           "Build secure, resilient infrastructure that supports performance and future growth.",
         metadata: ["CLOUD", "INFRASTRUCTURE", "RELIABILITY"],
@@ -145,7 +145,7 @@ export const CORE_CAPABILITIES: Record<ServiceSlug, CoreCapabilitiesConfig> = {
       {
         id: "data-operations",
         index: "04",
-        title: "Data & Operations",
+        title: "Data & operations",
         description:
           "Create cleaner data flows and reduce manual dependencies across internal systems.",
         metadata: ["DATA", "OPERATIONS", "AUTOMATION"],
@@ -165,7 +165,7 @@ export const CORE_CAPABILITIES: Record<ServiceSlug, CoreCapabilitiesConfig> = {
       {
         id: "cloud-architecture",
         index: "01",
-        title: "Cloud Architecture",
+        title: "Cloud architecture",
         description:
           "Design secure, scalable topologies across compute, data, networking, and environments.",
         metadata: ["TOPOLOGY", "COMPUTE", "NETWORK"],
@@ -176,7 +176,7 @@ export const CORE_CAPABILITIES: Record<ServiceSlug, CoreCapabilitiesConfig> = {
       {
         id: "migration-modernization",
         index: "02",
-        title: "Migration & Modernization",
+        title: "Migration & modernization",
         description:
           "Move and modernize workloads with controlled cutovers that protect delivery momentum.",
         metadata: ["MIGRATION", "CUTOVER", "MODERNIZE"],
@@ -186,7 +186,7 @@ export const CORE_CAPABILITIES: Record<ServiceSlug, CoreCapabilitiesConfig> = {
       {
         id: "devops-automation",
         index: "03",
-        title: "DevOps & Automation",
+        title: "DevOps & automation",
         description:
           "Introduce IaC, CI/CD, and operational automation so environments stay repeatable.",
         metadata: ["IAC", "CI/CD", "OPS"],
@@ -196,7 +196,7 @@ export const CORE_CAPABILITIES: Record<ServiceSlug, CoreCapabilitiesConfig> = {
       {
         id: "cloud-optimization",
         index: "04",
-        title: "Performance & Cost Optimization",
+        title: "Performance & cost optimization",
         description:
           "Tune reliability, performance, and spend so growth does not inflate waste.",
         metadata: ["COST", "PERFORMANCE", "RELIABILITY"],
@@ -216,7 +216,7 @@ export const CORE_CAPABILITIES: Record<ServiceSlug, CoreCapabilitiesConfig> = {
       {
         id: "security-architecture",
         index: "01",
-        title: "Security Architecture",
+        title: "Security architecture",
         description:
           "Design controls, perimeters, and trust boundaries around the systems business depends on.",
         metadata: ["CONTROLS", "PERIMETER", "TRUST"],
@@ -227,7 +227,7 @@ export const CORE_CAPABILITIES: Record<ServiceSlug, CoreCapabilitiesConfig> = {
       {
         id: "cloud-security",
         index: "02",
-        title: "Cloud Security",
+        title: "Cloud security",
         description:
           "Harden cloud environments, identities, and shared services before exposure grows.",
         metadata: ["CLOUD", "HARDENING", "IDENTITY"],
@@ -237,7 +237,7 @@ export const CORE_CAPABILITIES: Record<ServiceSlug, CoreCapabilitiesConfig> = {
       {
         id: "application-security",
         index: "03",
-        title: "Application Security",
+        title: "Application security",
         description:
           "Protect applications and APIs with verification, review, and release-time safeguards.",
         metadata: ["APPS", "APIS", "REVIEW"],
@@ -247,7 +247,7 @@ export const CORE_CAPABILITIES: Record<ServiceSlug, CoreCapabilitiesConfig> = {
       {
         id: "monitoring-hardening",
         index: "04",
-        title: "Monitoring & Hardening",
+        title: "Monitoring & hardening",
         description:
           "Improve visibility and continuous hardening so threats are caught before they compound.",
         metadata: ["MONITORING", "DETECTION", "POSTURE"],
@@ -267,7 +267,7 @@ export const CORE_CAPABILITIES: Record<ServiceSlug, CoreCapabilitiesConfig> = {
       {
         id: "experience-design",
         index: "01",
-        title: "Experience Design",
+        title: "Experience design",
         description:
           "Design clear user journeys and interfaces around real customer intent and business goals.",
         metadata: ["UX", "JOURNEYS", "INTERFACES"],
@@ -278,7 +278,7 @@ export const CORE_CAPABILITIES: Record<ServiceSlug, CoreCapabilitiesConfig> = {
       {
         id: "frontend-development",
         index: "02",
-        title: "Frontend Development",
+        title: "Frontend development",
         description:
           "Build responsive, performant interfaces with production-grade implementation.",
         metadata: ["FRONTEND", "RESPONSIVE", "PERFORMANCE"],
@@ -288,7 +288,7 @@ export const CORE_CAPABILITIES: Record<ServiceSlug, CoreCapabilitiesConfig> = {
       {
         id: "platform-integration",
         index: "03",
-        title: "Platform Integration",
+        title: "Platform integration",
         description:
           "Connect content, APIs, data and business systems into one reliable digital product.",
         metadata: ["APIs", "CMS", "INTEGRATIONS"],
@@ -298,7 +298,7 @@ export const CORE_CAPABILITIES: Record<ServiceSlug, CoreCapabilitiesConfig> = {
       {
         id: "conversion-optimization",
         index: "04",
-        title: "Conversion Optimization",
+        title: "Conversion optimization",
         description:
           "Improve friction points, interaction patterns and journeys that influence action.",
         metadata: ["CONVERSION", "TESTING", "UX"],
@@ -318,7 +318,7 @@ export const CORE_CAPABILITIES: Record<ServiceSlug, CoreCapabilitiesConfig> = {
       {
         id: "search-strategy",
         index: "01",
-        title: "Search Strategy",
+        title: "Search strategy",
         description:
           "Map demand, intent and opportunity into a focused discovery roadmap.",
         metadata: ["INTENT", "DEMAND", "STRATEGY"],
@@ -329,7 +329,7 @@ export const CORE_CAPABILITIES: Record<ServiceSlug, CoreCapabilitiesConfig> = {
       {
         id: "content-architecture",
         index: "02",
-        title: "Content Architecture",
+        title: "Content architecture",
         description:
           "Structure content around topics, entities and relationships that discovery systems can understand.",
         metadata: ["CONTENT", "TOPICS", "ENTITIES"],
@@ -339,7 +339,7 @@ export const CORE_CAPABILITIES: Record<ServiceSlug, CoreCapabilitiesConfig> = {
       {
         id: "authority-building",
         index: "03",
-        title: "Authority Building",
+        title: "Authority building",
         description:
           "Strengthen the signals that increase trust, credibility and discoverability.",
         metadata: ["AUTHORITY", "TRUST", "SIGNALS"],
@@ -349,7 +349,7 @@ export const CORE_CAPABILITIES: Record<ServiceSlug, CoreCapabilitiesConfig> = {
       {
         id: "geo-ai-discovery",
         index: "04",
-        title: "GEO & AI Discovery",
+        title: "GEO & AI discovery",
         description:
           "Improve how the brand is understood and surfaced across modern AI-driven discovery environments.",
         metadata: ["GEO", "AI SEARCH", "DISCOVERY"],

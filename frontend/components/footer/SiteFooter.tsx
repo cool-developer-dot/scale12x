@@ -12,17 +12,17 @@ const COMPANY_LINKS = [
 ] as const;
 
 const SERVICE_LINKS = [
-  { label: "Growth Strategy", href: "/services/growth-strategy" },
-  { label: "AI & Automation", href: "/services/ai-automation" },
-  { label: "Technology & Transformation", href: "/services/technology-transformation" },
-  { label: "Brand & Creative", href: "/services/brand-creative" },
-  { label: "Paid Media", href: "/services/paid-media" },
-  { label: "Web & Digital", href: "/services/web-digital" },
+  { label: "Growth strategy", href: "/services/growth-strategy" },
+  { label: "AI and automation", href: "/services/ai-automation" },
+  { label: "Technology and transformation", href: "/services/technology-transformation" },
+  { label: "Brand and creative", href: "/services/brand-creative" },
+  { label: "Paid media", href: "/services/paid-media" },
+  { label: "Web and digital", href: "/services/web-digital" },
 ] as const;
 
 const CONNECT_LINKS = [
   { label: "Book a discovery call", href: "/contact" },
-  { label: "Start Scaling", href: "/contact" },
+  { label: "Start scaling", href: "/contact" },
 ] as const;
 
 const CITIES = [
@@ -129,7 +129,7 @@ export default function SiteFooter() {
       aria-labelledby="footer-brand"
     >
       <span className="site-footer__wordmark" aria-hidden="true">
-        SCALE12X
+        SCALE 12X
       </span>
 
       <div className="site-footer__inner">
@@ -140,20 +140,16 @@ export default function SiteFooter() {
           >
             <BrandLogo className="site-footer__logo" />
             <p id="footer-brand" className="site-footer__tagline">
-              Growth, amplified. One partner. Every channel. Built on AI.
+              Growth, engineered.
             </p>
-            <p className="site-footer__status">
-              AI-native delivery
-              <span aria-hidden="true"> · </span>
-              One partner. Every channel.
-            </p>
+            <p className="site-footer__status">AI native growth studio</p>
             <div className="site-footer__social">
               <a
                 href="https://www.linkedin.com/company/scale12x"
                 className="site-footer__social-icon"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Scale12x on LinkedIn (opens in a new tab)"
+                aria-label="Scale 12x on LinkedIn (opens in a new tab)"
               >
                 <LinkedInIcon />
               </a>
@@ -162,7 +158,7 @@ export default function SiteFooter() {
                 className="site-footer__social-icon"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Scale12x on X (opens in a new tab)"
+                aria-label="Scale 12x on X (opens in a new tab)"
               >
                 <XIcon />
               </a>
@@ -244,7 +240,7 @@ export default function SiteFooter() {
           </div>
 
           <div className="site-footer__meta-item site-footer__meta-item--cities">
-            <p className="site-footer__meta-label">Operating Across</p>
+            <p className="site-footer__meta-label">Operating across</p>
             <p className="site-footer__meta-value site-footer__cities">
               {CITIES.map((city, i) => (
                 <span key={city}>
@@ -264,7 +260,7 @@ export default function SiteFooter() {
             <p className="site-footer__meta-label">Availability</p>
             <p className="site-footer__meta-value site-footer__availability">
               <span className="site-footer__status-dot" aria-hidden="true" />
-              Founder-led. AI-native. Taking select growth engagements.
+              Founder-led. AI native. Taking select growth engagements.
             </p>
           </div>
         </div>
@@ -276,7 +272,7 @@ export default function SiteFooter() {
           className="site-footer__layer site-footer__layer--legal opacity-0"
         >
           <p className="site-footer__copyright">
-            © 2026 Scale12x. All rights reserved.
+            © 2026 Scale 12x. All rights reserved.
           </p>
 
           <div className="site-footer__legal-right">

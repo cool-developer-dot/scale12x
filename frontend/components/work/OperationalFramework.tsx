@@ -84,7 +84,7 @@ export default function OperationalFramework() {
       <header className="framework-header">
         <p
           data-work-animate="fw-eyebrow"
-          className="font-mono text-[0.68rem] font-medium tracking-[0.18em] text-[#3B82F6] uppercase opacity-0"
+          className="font-sans text-[0.68rem] font-medium tracking-[0.18em] text-[rgb(var(--accent-rgb))] uppercase opacity-0"
         >
           HOW WE WORK / 01–04
         </p>
@@ -94,7 +94,7 @@ export default function OperationalFramework() {
           className="framework-header__headline opacity-0"
         >
           From ambition{" "}
-          <span className="text-[#3B82F6]">to execution.</span>
+          <span className="text-[rgb(var(--accent-rgb))]">to execution.</span>
         </h3>
         <p
           data-work-animate="fw-support"

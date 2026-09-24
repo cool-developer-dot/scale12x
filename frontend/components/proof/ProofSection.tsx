@@ -87,7 +87,7 @@ export default function ProofSection() {
       className="proof-section relative overflow-hidden"
     >
       <div
-        className="pointer-events-none absolute inset-x-0 top-0 z-[1] h-px bg-gradient-to-r from-transparent via-[var(--color-accent)]/35 to-transparent"
+        className="pointer-events-none absolute inset-x-0 top-0 z-[1] h-px bg-gradient-to-r from-transparent via-[rgb(var(--line-rgb))] to-transparent"
         aria-hidden="true"
       />
 
@@ -95,14 +95,14 @@ export default function ProofSection() {
         <header className="max-w-2xl">
           <p
             data-proof-animate="eyebrow"
-            className="font-mono text-[0.68rem] font-medium tracking-[0.18em] text-[var(--color-accent)] uppercase opacity-0"
+            className="font-sans text-[0.68rem] font-medium tracking-[0.18em] text-[rgb(var(--accent-rgb))] uppercase opacity-0"
           >
             PROOF, NOT PROMISES
           </p>
           <h2
             id="proof-heading"
             data-proof-animate="headline"
-            className="mt-3 font-sans text-[clamp(1.7rem,3vw,2.5rem)] leading-[1.06] font-medium tracking-[-0.035em] text-[var(--color-text)] opacity-0"
+            className="mt-3 font-sans text-[clamp(1.7rem,3vw,2.5rem)] leading-[1.06] font-bold tracking-[-0.03em] text-[var(--color-text)] opacity-0"
           >
             The work speaks for itself.
           </h2>
@@ -110,7 +110,7 @@ export default function ProofSection() {
             data-proof-animate="support"
             className="mt-3 max-w-xl text-[0.98rem] leading-relaxed text-[var(--color-muted)] opacity-0 sm:text-[1.02rem]"
           >
-            AI-native across every practice. Founder-led premium. A track record
+            AI native across every practice. Founder-led premium. A track record
             you can verify.
           </p>
         </header>

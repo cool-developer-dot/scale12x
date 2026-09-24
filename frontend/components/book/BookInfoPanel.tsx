@@ -5,11 +5,11 @@ import { ClockIcon, VideoIcon } from "./icons";
 export default function BookInfoPanel() {
   return (
     <aside className="book-info" aria-label="Meeting information">
-      <BrandLogo className="book-info__logo" priority />
+      <BrandLogo className="book-info__logo" priority tone="cream" />
 
       <p className="book-info__eyebrow">Strategy call</p>
 
-      <h1 className="book-info__title">30 Minute Strategy Call</h1>
+      <h1 className="book-info__title">30-minute strategy call</h1>
 
       <ul className="book-info__meta">
         <li>

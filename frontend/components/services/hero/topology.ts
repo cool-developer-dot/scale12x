@@ -34,7 +34,7 @@ export type AnchorNode = {
 };
 
 /**
- * Clean Scale12x capability topology — three depth tiers only.
+ * Clean Scale 12x capability topology — three depth tiers only.
  * Primary routes carry the operating sequence; secondary support;
  * construction is sparse and core-adjacent.
  */
@@ -181,11 +181,11 @@ export const SPINE_RISERS: { capability: Capability["id"]; d: string }[] = [
 ];
 
 export const STROKE: Record<PathStyle, string> = {
-  white: "rgba(210, 225, 245, 0.58)",
-  cobalt: "#2563EB",
-  active: "#3B82F6",
-  secondary: "rgba(100, 125, 165, 0.26)",
-  micro: "rgba(90, 115, 150, 0.10)",
+  white: "rgba(var(--fg-rgb), 0.58)",
+  cobalt: "rgb(var(--accent-rgb))",
+  active: "rgb(var(--accent-rgb))",
+  secondary: "rgba(var(--muted-rgb), 0.26)",
+  micro: "rgba(var(--muted-rgb), 0.1)",
 };
 
 /** Primary path emphasized when a capability is active (legacy single-path map). */

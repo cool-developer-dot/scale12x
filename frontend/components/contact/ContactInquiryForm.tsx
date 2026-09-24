@@ -201,7 +201,7 @@ export default function ContactInquiryForm() {
             Book a discovery call ↗
           </a>
           <Link href="/" className="contact-form-success__ghost">
-            Back to Scale12x
+            Back to Scale 12x
           </Link>
         </div>
       </div>
@@ -233,7 +233,7 @@ export default function ContactInquiryForm() {
         <div className="contact-form__grid">
           <div className="contact-field">
             <label className="contact-field__label" htmlFor={`${formId}-firstName`}>
-              First Name
+              First name
             </label>
             <input
               id={`${formId}-firstName`}
@@ -260,7 +260,7 @@ export default function ContactInquiryForm() {
 
           <div className="contact-field">
             <label className="contact-field__label" htmlFor={`${formId}-lastName`}>
-              Last Name
+              Last name
             </label>
             <input
               id={`${formId}-lastName`}
@@ -287,7 +287,7 @@ export default function ContactInquiryForm() {
 
           <div className="contact-field">
             <label className="contact-field__label" htmlFor={`${formId}-email`}>
-              Work Email
+              Work email
             </label>
             <input
               id={`${formId}-email`}
@@ -342,7 +342,7 @@ export default function ContactInquiryForm() {
 
           <div className="contact-field">
             <label className="contact-field__label" htmlFor={`${formId}-role`}>
-              Role / Title
+              Role / title
             </label>
             <input
               id={`${formId}-role`}
@@ -358,7 +358,7 @@ export default function ContactInquiryForm() {
 
           <div className="contact-field">
             <label className="contact-field__label" htmlFor={`${formId}-website`}>
-              Website / Company URL
+              Website / company URL
             </label>
             <input
               id={`${formId}-website`}
@@ -445,7 +445,7 @@ export default function ContactInquiryForm() {
 
         <fieldset className="contact-fieldset">
           <legend className="contact-field__label" id={`${formId}-budget-label`}>
-            Budget / Engagement range
+            Budget / engagement range
           </legend>
           <div
             className="contact-budget"

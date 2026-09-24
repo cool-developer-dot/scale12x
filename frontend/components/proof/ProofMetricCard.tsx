@@ -188,12 +188,12 @@ export default function ProofMetricCard({
 
       <p
         ref={indexRef}
-        className="font-mono text-[0.62rem] font-medium tracking-[0.18em] text-[var(--color-muted)] uppercase opacity-0"
+        className="font-sans text-[0.62rem] font-medium tracking-[0.18em] text-[var(--color-muted)] uppercase opacity-0"
       >
         {data.index} / {data.category}
       </p>
 
-      <p className="proof-metric mt-5 font-sans text-[clamp(2.35rem,4vw,3.15rem)] leading-none font-medium tracking-[-0.04em]">
+      <p className="proof-metric mt-5 font-sans text-[clamp(2.35rem,4vw,3.15rem)] leading-none font-bold tracking-[-0.03em]">
         <span ref={metricRef} className="inline-block opacity-0">
           {display}
         </span>
@@ -201,7 +201,7 @@ export default function ProofMetricCard({
 
       <p
         ref={labelRef}
-        className="mt-3.5 font-mono text-[0.68rem] font-medium tracking-[0.16em] text-[var(--color-accent)] uppercase opacity-0"
+        className="mt-3.5 font-sans text-[0.68rem] font-medium tracking-[0.16em] text-[rgb(var(--moss-rgb))] uppercase opacity-0"
       >
         {data.label}
       </p>

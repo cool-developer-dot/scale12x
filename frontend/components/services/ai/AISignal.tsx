@@ -33,7 +33,7 @@ export default function AISignal({
 
   return (
     <g className="ai-hero__signal" aria-hidden="true">
-      <circle r={glowR} fill="rgba(59, 130, 246, 0.22)">
+      <circle r={glowR} fill="rgba(var(--accent-rgb), 0.22)">
         <animateMotion {...motionProps} />
         <animate
           attributeName="opacity"
@@ -43,7 +43,7 @@ export default function AISignal({
           fill="freeze"
         />
       </circle>
-      <circle r={midR} fill={outbound ? "#3B82F6" : "#60A5FA"}>
+      <circle r={midR} fill={outbound ? "rgb(var(--accent-rgb))" : "rgb(var(--accent-rgb))"}>
         <animateMotion {...motionProps} />
         <animate
           attributeName="opacity"
@@ -53,7 +53,7 @@ export default function AISignal({
           fill="freeze"
         />
       </circle>
-      <circle r={coreR} fill="#F8FAFC">
+      <circle r={coreR} fill="rgb(var(--fg-rgb))">
         <animateMotion {...motionProps} />
         <animate
           attributeName="opacity"

@@ -58,12 +58,12 @@ export default function AIAutomationVisual({
       `}</style>
 
       {/* Left data stream */}
-      <g className="service-visual__stream" stroke="rgba(255,255,255,0.28)" strokeWidth="1">
+      <g className="service-visual__stream" stroke="rgba(var(--cream-rgb), 0.28)" strokeWidth="1">
         <line x1="28" y1="48" x2="118" y2="92" />
         <line x1="28" y1="78" x2="118" y2="108" />
         <line x1="28" y1="108" x2="118" y2="124" />
         <line x1="28" y1="138" x2="118" y2="140" />
-        <g fill="#93C5FD">
+        <g fill="rgb(var(--cream-rgb))">
           <circle className="service-visual__stream-dot" cx="42" cy="54" r="2.2" />
           <circle className="service-visual__stream-dot" cx="58" cy="72" r="2" style={{ animationDelay: "0.3s" }} />
           <circle className="service-visual__stream-dot" cx="48" cy="98" r="2.2" style={{ animationDelay: "0.55s" }} />
@@ -77,37 +77,37 @@ export default function AIAutomationVisual({
       <g className="service-visual__hex" transform="translate(180 110)">
         <polygon
           points="0,-42 36,-21 36,21 0,42 -36,21 -36,-21"
-          fill="#BFDBFE"
+          fill="rgb(var(--cream-rgb))"
           fillOpacity="0.14"
-          stroke="rgba(255,255,255,0.55)"
+          stroke="rgba(var(--cream-rgb), 0.55)"
           strokeWidth="1.4"
         />
         <polygon
           points="0,-22 19,-11 19,11 0,22 -19,11 -19,-11"
-          fill="#60A5FA"
+          fill="rgb(var(--cream-rgb))"
           fillOpacity="0.28"
-          stroke="rgba(255,255,255,0.45)"
+          stroke="rgba(var(--cream-rgb), 0.45)"
           strokeWidth="1"
         />
-        <circle r="5" fill="#93C5FD" />
+        <circle r="5" fill="rgb(var(--cream-rgb))" />
       </g>
 
       {/* Right bar chart */}
       <g className="service-visual__chart" transform="translate(248 52)">
-        <line x1="0" y1="100" x2="88" y2="100" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
-        <rect className="service-visual__bar" x="8" y="58" width="12" height="42" rx="2" fill="#93C5FD" fillOpacity="0.45" />
-        <rect className="service-visual__bar" x="28" y="38" width="12" height="62" rx="2" fill="#60A5FA" fillOpacity="0.5" style={{ animationDelay: "0.2s" }} />
-        <rect className="service-visual__bar" x="48" y="48" width="12" height="52" rx="2" fill="#BFDBFE" fillOpacity="0.4" style={{ animationDelay: "0.4s" }} />
-        <rect className="service-visual__bar" x="68" y="22" width="12" height="78" rx="2" fill="#60A5FA" fillOpacity="0.6" style={{ animationDelay: "0.6s" }} />
+        <line x1="0" y1="100" x2="88" y2="100" stroke="rgba(var(--cream-rgb), 0.2)" strokeWidth="1" />
+        <rect className="service-visual__bar" x="8" y="58" width="12" height="42" rx="2" fill="rgb(var(--cream-rgb))" fillOpacity="0.45" />
+        <rect className="service-visual__bar" x="28" y="38" width="12" height="62" rx="2" fill="rgb(var(--cream-rgb))" fillOpacity="0.5" style={{ animationDelay: "0.2s" }} />
+        <rect className="service-visual__bar" x="48" y="48" width="12" height="52" rx="2" fill="rgb(var(--cream-rgb))" fillOpacity="0.4" style={{ animationDelay: "0.4s" }} />
+        <rect className="service-visual__bar" x="68" y="22" width="12" height="78" rx="2" fill="rgb(var(--cream-rgb))" fillOpacity="0.6" style={{ animationDelay: "0.6s" }} />
       </g>
 
       {/* Chips */}
       <g
         className="service-visual__chips"
-        fontFamily="var(--font-geist), system-ui, sans-serif"
+        fontFamily="var(--font-inter), system-ui, sans-serif"
         fontSize="8"
         letterSpacing="0.08em"
-        fill="rgba(255,255,255,0.7)"
+        fill="rgba(var(--cream-rgb), 0.7)"
       >
         {[
           { label: "PREDICT", x: 48 },
@@ -121,7 +121,7 @@ export default function AIAutomationVisual({
             transform={`translate(${chip.x} 188)`}
             style={{ animationDelay: `${i * 0.25}s` }}
           >
-            <rect x="-28" y="-10" width="56" height="20" rx="4" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.28)" strokeWidth="1" />
+            <rect x="-28" y="-10" width="56" height="20" rx="4" fill="rgba(var(--cream-rgb), 0.06)" stroke="rgba(var(--cream-rgb), 0.28)" strokeWidth="1" />
             <text textAnchor="middle" y="3.5">{chip.label}</text>
           </g>
         ))}

@@ -20,11 +20,11 @@ export default function ServiceSignal({
   const glowR = outbound ? 6.2 : 5.6;
   const midFill = neutral
     ? outbound
-      ? "rgba(226,232,240,0.85)"
-      : "rgba(148,163,184,0.9)"
+      ? "rgba(var(--fg-rgb), 0.85)"
+      : "rgba(var(--muted-rgb), 0.9)"
     : outbound
-      ? "#3B82F6"
-      : "#60A5FA";
+      ? "rgb(var(--accent-rgb))"
+      : "rgb(var(--accent-rgb))";
 
   const motionProps = {
     dur: `${duration}s`,
@@ -38,7 +38,7 @@ export default function ServiceSignal({
 
   return (
     <g className="ai-hero__signal" aria-hidden="true">
-      <circle r={glowR} fill="rgba(59, 130, 246, 0.22)">
+      <circle r={glowR} fill="rgba(var(--accent-rgb), 0.22)">
         <animateMotion {...motionProps} />
         <animate
           attributeName="opacity"
@@ -58,7 +58,7 @@ export default function ServiceSignal({
           fill="freeze"
         />
       </circle>
-      <circle r={coreR} fill="#F8FAFC">
+      <circle r={coreR} fill="rgb(var(--fg-rgb))">
         <animateMotion {...motionProps} />
         <animate
           attributeName="opacity"

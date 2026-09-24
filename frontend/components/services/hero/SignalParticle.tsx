@@ -35,7 +35,7 @@ export default function SignalParticle({
 
   return (
     <g className="services-hero__signal" opacity={isSecondary ? 0.4 : 1}>
-      <circle r={glowR} fill="rgba(59, 130, 246, 0.22)">
+      <circle r={glowR} fill="rgba(var(--accent-rgb), 0.22)">
         <animateMotion {...motionProps} />
         <animate
           attributeName="opacity"
@@ -45,7 +45,7 @@ export default function SignalParticle({
           fill="freeze"
         />
       </circle>
-      <circle r={midR} fill="#3B82F6">
+      <circle r={midR} fill="rgb(var(--accent-rgb))">
         <animateMotion {...motionProps} />
         <animate
           attributeName="opacity"
@@ -55,7 +55,7 @@ export default function SignalParticle({
           fill="freeze"
         />
       </circle>
-      <circle r={coreR} fill="#F5F5F2">
+      <circle r={coreR} fill="rgb(var(--fg-rgb))">
         <animateMotion {...motionProps} />
         <animate
           attributeName="opacity"

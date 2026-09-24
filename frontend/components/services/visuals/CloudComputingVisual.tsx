@@ -49,8 +49,8 @@ export default function CloudComputingVisual({
       {/* Cloud outline */}
       <path
         d="M92 78c0-18 14-32 32-32 10 0 19 4 25 11a28 28 0 0 1 41 24c0 1 0 3-.2 4H92.4A20 20 0 0 1 92 78Z"
-        fill="rgba(147,197,253,0.12)"
-        stroke="#93C5FD"
+        fill="rgba(var(--cream-rgb), 0.12)"
+        stroke="rgb(var(--cream-rgb))"
         strokeOpacity="0.55"
         strokeWidth="1.4"
       />
@@ -58,24 +58,24 @@ export default function CloudComputingVisual({
         x="140"
         y="78"
         textAnchor="middle"
-        fontFamily="var(--font-geist-mono), ui-monospace, monospace"
+        fontFamily="var(--font-jetbrains-mono), ui-monospace, monospace"
         fontSize="8"
         letterSpacing="0.14em"
-        fill="rgba(255,255,255,0.7)"
+        fill="rgba(var(--cream-rgb), 0.7)"
       >
         CLOUD
       </text>
 
       {/* Links */}
-      <g stroke="#60A5FA" strokeWidth="1.25" fill="none">
+      <g stroke="rgb(var(--cream-rgb))" strokeWidth="1.25" fill="none">
         <path className="service-visual__link" d="M118 96 L78 132" strokeOpacity="0.55" />
         <path className="service-visual__link" d="M140 98 L140 132" strokeOpacity="0.55" style={{ animationDelay: "0.25s" }} />
         <path className="service-visual__link" d="M162 96 L202 132" strokeOpacity="0.55" style={{ animationDelay: "0.5s" }} />
       </g>
 
-      <circle className="service-visual__pulse" cx="100" cy="112" r="2.2" fill="#93C5FD" />
-      <circle className="service-visual__pulse" cx="140" cy="116" r="2.2" fill="#93C5FD" style={{ animationDelay: "0.35s" }} />
-      <circle className="service-visual__pulse" cx="180" cy="112" r="2.2" fill="#93C5FD" style={{ animationDelay: "0.7s" }} />
+      <circle className="service-visual__pulse" cx="100" cy="112" r="2.2" fill="rgb(var(--cream-rgb))" />
+      <circle className="service-visual__pulse" cx="140" cy="116" r="2.2" fill="rgb(var(--cream-rgb))" style={{ animationDelay: "0.35s" }} />
+      <circle className="service-visual__pulse" cx="180" cy="112" r="2.2" fill="rgb(var(--cream-rgb))" style={{ animationDelay: "0.7s" }} />
 
       {/* Nodes */}
       {[
@@ -84,15 +84,15 @@ export default function CloudComputingVisual({
         { x: 202, label: "STORAGE" },
       ].map((node, i) => (
         <g key={node.label} className="service-visual__node" style={{ animationDelay: `${0.2 + i * 0.2}s` }}>
-          <rect x={node.x - 28} y="132" width="56" height="22" rx="6" fill="rgba(15,23,42,0.35)" stroke="rgba(255,255,255,0.28)" strokeWidth="1" />
+          <rect x={node.x - 28} y="132" width="56" height="22" rx="6" fill="rgba(var(--ink-rgb), 0.35)" stroke="rgba(var(--cream-rgb), 0.28)" strokeWidth="1" />
           <text
             x={node.x}
             y="146"
             textAnchor="middle"
-            fontFamily="var(--font-geist-mono), ui-monospace, monospace"
+            fontFamily="var(--font-jetbrains-mono), ui-monospace, monospace"
             fontSize="7"
             letterSpacing="0.08em"
-            fill="rgba(255,255,255,0.78)"
+            fill="rgba(var(--cream-rgb), 0.78)"
           >
             {node.label}
           </text>

@@ -68,7 +68,7 @@ export default function ServicesSection() {
           <div className="services-header__main">
             <p
               data-services-animate="eyebrow"
-              className="font-mono text-[0.68rem] font-medium tracking-[0.18em] text-[#2563EB] uppercase opacity-0"
+              className="font-sans text-[0.68rem] font-medium tracking-[0.18em] text-[rgb(var(--accent-rgb))] uppercase opacity-0"
             >
               WHAT WE DO / 01–07
             </p>
@@ -77,8 +77,8 @@ export default function ServicesSection() {
               data-services-animate="headline"
               className="services-header__headline mt-3 opacity-0"
             >
-              <span className="block text-[#0F172A]">One partner.</span>
-              <span className="block text-[#2563EB]">Every channel.</span>
+              <span className="block">One partner.</span>
+              <span className="block text-[rgb(var(--accent-rgb))]">Every channel.</span>
             </h2>
           </div>
 

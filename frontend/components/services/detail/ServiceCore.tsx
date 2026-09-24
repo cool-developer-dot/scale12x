@@ -44,13 +44,13 @@ function CoreGeometry({
 }) {
   const stroke = pulse
     ? neutral
-      ? "rgba(226,232,240,0.88)"
-      : "rgba(147,197,253,0.88)"
+      ? "rgba(var(--fg-rgb), 0.88)"
+      : "rgba(var(--accent-rgb), 0.88)"
     : neutral
-      ? "rgba(148,163,184,0.55)"
-      : "rgba(96,165,250,0.58)";
-  const fill = neutral ? "rgba(148,163,184,0.12)" : "rgba(37,99,235,0.16)";
-  const fillInner = neutral ? "rgba(148,163,184,0.2)" : "rgba(37,99,235,0.28)";
+      ? "rgba(var(--muted-rgb), 0.55)"
+      : "rgba(var(--accent-rgb), 0.58)";
+  const fill = neutral ? "rgba(var(--muted-rgb), 0.12)" : "rgba(var(--accent-rgb), 0.16)";
+  const fillInner = neutral ? "rgba(var(--muted-rgb), 0.2)" : "rgba(var(--accent-rgb), 0.28)";
 
   if (variant === "technology") {
     return (
@@ -58,7 +58,7 @@ function CoreGeometry({
         <rect x={cx - r} y={cy - r * 0.7} width={r * 2} height={r * 0.4} rx="2" fill={fill} stroke={stroke} strokeWidth="1.1" />
         <rect x={cx - r * 0.85} y={cy - r * 0.2} width={r * 1.7} height={r * 0.4} rx="2" fill={fillInner} stroke={stroke} strokeWidth="1" />
         <rect x={cx - r * 0.7} y={cy + r * 0.3} width={r * 1.4} height={r * 0.35} rx="2" fill={fill} stroke={stroke} strokeWidth="0.9" />
-        <circle cx={cx} cy={cy} r={2.8} fill={neutral ? "#E2E8F0" : "#2563EB"} />
+        <circle cx={cx} cy={cy} r={2.8} fill={neutral ? "rgb(var(--fg-rgb))" : "rgb(var(--accent-rgb))"} />
       </>
     );
   }
@@ -73,7 +73,7 @@ function CoreGeometry({
         <line x1={cx} y1={cy + r * 0.1} x2={cx - r * 0.55} y2={cy + r * 0.3} stroke={stroke} strokeWidth="0.85" />
         <line x1={cx} y1={cy + r * 0.1} x2={cx} y2={cy + r * 0.35} stroke={stroke} strokeWidth="0.85" />
         <line x1={cx} y1={cy + r * 0.1} x2={cx + r * 0.55} y2={cy + r * 0.3} stroke={stroke} strokeWidth="0.85" />
-        <circle cx={cx} cy={cy - r * 0.15} r={2.6} fill="#2563EB" />
+        <circle cx={cx} cy={cy - r * 0.15} r={2.6} fill="rgb(var(--accent-rgb))" />
       </>
     );
   }
@@ -93,11 +93,11 @@ function CoreGeometry({
           stroke={stroke}
           strokeWidth="0.9"
         />
-        <circle cx={cx} cy={cy - r * 0.05} r={2.6} fill="#2563EB" />
+        <circle cx={cx} cy={cy - r * 0.05} r={2.6} fill="rgb(var(--accent-rgb))" />
         <path
           d={`M ${cx - r * 0.18} ${cy - r * 0.05} L ${cx - r * 0.02} ${cy + r * 0.12} L ${cx + r * 0.22} ${cy - r * 0.22}`}
           fill="none"
-          stroke="#F8FAFC"
+          stroke="rgb(var(--fg-rgb))"
           strokeWidth="1.1"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -112,7 +112,7 @@ function CoreGeometry({
         <rect x={cx - r} y={cy - r * 0.75} width={r * 2} height={r * 1.5} rx="3" fill={fill} stroke={stroke} strokeWidth="1.1" />
         <path d={`M ${cx - r} ${cy - r * 0.4} H ${cx + r}`} stroke={stroke} strokeWidth="0.85" />
         <rect x={cx - r * 0.7} y={cy - r * 0.15} width={r * 1.4} height={r * 0.7} rx="2" fill={fillInner} stroke={stroke} strokeWidth="0.85" />
-        <circle cx={cx - r * 0.7} cy={cy - r * 0.55} r="1.2" fill="#F8FAFC" opacity="0.7" />
+        <circle cx={cx - r * 0.7} cy={cy - r * 0.55} r="1.2" fill="rgb(var(--fg-rgb))" opacity="0.7" />
       </>
     );
   }
@@ -144,7 +144,7 @@ function CoreGeometry({
             </g>
           );
         })}
-        <circle cx={cx} cy={cy} r={2.4} fill="#F8FAFC" />
+        <circle cx={cx} cy={cy} r={2.4} fill="rgb(var(--fg-rgb))" />
       </>
     );
   }
@@ -161,11 +161,11 @@ function CoreGeometry({
         <polygon
           points={`${cx},${cy - r * 0.5} ${cx + r * 0.4},${cy} ${cx},${cy + r * 0.5} ${cx - r * 0.4},${cy}`}
           fill={fillInner}
-          stroke="rgba(226,232,240,0.45)"
+          stroke="rgba(var(--fg-rgb), 0.45)"
           strokeWidth="0.9"
         />
-        <circle cx={cx} cy={cy} r={2.8} fill="#2563EB" />
-        <circle cx={cx} cy={cy} r={1.2} fill="#F8FAFC" />
+        <circle cx={cx} cy={cy} r={2.8} fill="rgb(var(--accent-rgb))" />
+        <circle cx={cx} cy={cy} r={1.2} fill="rgb(var(--fg-rgb))" />
       </>
     );
   }
@@ -176,7 +176,7 @@ function CoreGeometry({
       <polygon
         points={hexPoints(cx, cy, r * 0.58)}
         fill={fillInner}
-        stroke="rgba(226,232,240,0.45)"
+        stroke="rgba(var(--fg-rgb), 0.45)"
         strokeWidth="0.9"
       />
       {Array.from({ length: 6 }).map((_, i) => {
@@ -188,13 +188,13 @@ function CoreGeometry({
             y1={cy}
             x2={cx + Math.cos(a) * r * 0.92}
             y2={cy + Math.sin(a) * r * 0.92}
-            stroke="rgba(96,165,250,0.35)"
+            stroke="rgba(var(--accent-rgb), 0.35)"
             strokeWidth="0.65"
           />
         );
       })}
-      <circle cx={cx} cy={cy} r={3.2} fill="#2563EB" />
-      <circle cx={cx} cy={cy} r={1.4} fill="#F8FAFC" />
+      <circle cx={cx} cy={cy} r={3.2} fill="rgb(var(--accent-rgb))" />
+      <circle cx={cx} cy={cy} r={1.4} fill="rgb(var(--fg-rgb))" />
     </>
   );
 }
@@ -233,17 +233,17 @@ export default function ServiceCore({
   ) as Record<string, number>;
 
   const ringStroke = neutral
-    ? "rgba(148,163,184,0.35)"
-    : "rgba(59,130,246,0.3)";
+    ? "rgba(var(--muted-rgb), 0.35)"
+    : "rgba(var(--accent-rgb), 0.3)";
   const activeRing = neutral
-    ? "rgba(226,232,240,0.7)"
-    : "rgba(59,130,246,0.48)";
+    ? "rgba(var(--fg-rgb), 0.7)"
+    : "rgba(var(--accent-rgb), 0.48)";
   const activeRingPulse = neutral
-    ? "rgba(248,250,252,0.85)"
-    : "rgba(96,165,250,0.78)";
+    ? "rgba(var(--fg-rgb), 0.85)"
+    : "rgba(var(--accent-rgb), 0.78)";
   const edgeBlue = neutral
-    ? "rgba(148,163,184,0.22)"
-    : "rgba(59,130,246,0.22)";
+    ? "rgba(var(--muted-rgb), 0.22)"
+    : "rgba(var(--accent-rgb), 0.22)";
 
   return (
     <g className="ai-hero__core-group">
@@ -276,8 +276,8 @@ export default function ServiceCore({
         width={chamberW}
         height={chamberH}
         rx={28 * scale}
-        fill="rgba(5,11,20,0.55)"
-        stroke="rgba(148,163,184,0.2)"
+        fill="rgba(var(--surface-rgb), 0.55)"
+        stroke="rgba(var(--muted-rgb), 0.2)"
         strokeWidth="1.1"
       />
       <rect
@@ -287,7 +287,7 @@ export default function ServiceCore({
         height={chamberH - 16}
         rx={22 * scale}
         fill="none"
-        stroke={neutral ? "rgba(148,163,184,0.1)" : "rgba(59,130,246,0.1)"}
+        stroke={neutral ? "rgba(var(--muted-rgb), 0.1)" : "rgba(var(--accent-rgb), 0.1)"}
         strokeWidth="0.8"
       />
 
@@ -297,7 +297,7 @@ export default function ServiceCore({
         y1={chamberY + 28 * scale}
         x2={cx}
         y2={chamberY + chamberH - 36 * scale}
-        stroke={neutral ? "rgba(148,163,184,0.08)" : "rgba(59,130,246,0.1)"}
+        stroke={neutral ? "rgba(var(--muted-rgb), 0.08)" : "rgba(var(--accent-rgb), 0.1)"}
         strokeWidth="0.7"
         strokeDasharray="2 6"
       />
@@ -306,7 +306,7 @@ export default function ServiceCore({
         y1={chamberY + 28 * scale}
         x2={cx}
         y2={chamberY + chamberH - 36 * scale}
-        stroke={neutral ? "rgba(226,232,240,0.35)" : "rgba(96,165,250,0.45)"}
+        stroke={neutral ? "rgba(var(--fg-rgb), 0.35)" : "rgba(var(--accent-rgb), 0.45)"}
         strokeWidth="1"
         initial={false}
         animate={{ opacity: pulse ? 0.9 : 0 }}
@@ -319,7 +319,7 @@ export default function ServiceCore({
         y={chamberY + 28 * scale}
         textAnchor="middle"
         className="ai-hero__core-label"
-        fill={neutral ? "#94A3B8" : "#3B82F6"}
+        fill={neutral ? "rgb(var(--muted-rgb))" : "rgb(var(--accent-rgb))"}
         fontSize={stacked ? 7.5 : 9}
         letterSpacing="0.22em"
       >
@@ -359,7 +359,7 @@ export default function ServiceCore({
           rx={rMid + 6}
           ry={rMid - 8}
           fill="none"
-          stroke="rgba(148,163,184,0.2)"
+          stroke="rgba(var(--muted-rgb), 0.2)"
           strokeWidth="0.7"
           strokeDasharray="1.5 7"
         />
@@ -370,7 +370,7 @@ export default function ServiceCore({
         cy={cy}
         r={rMid}
         fill="none"
-        stroke="rgba(210,225,245,0.18)"
+        stroke="rgba(var(--fg-rgb), 0.18)"
         strokeWidth="0.9"
       />
       <circle
@@ -378,7 +378,7 @@ export default function ServiceCore({
         cy={cy}
         r={rInner + 14}
         fill="none"
-        stroke="rgba(148,163,184,0.12)"
+        stroke="rgba(var(--muted-rgb), 0.12)"
         strokeWidth="0.7"
       />
 
@@ -392,7 +392,7 @@ export default function ServiceCore({
             y1={cy + Math.sin(a) * (rInner + 10)}
             x2={cx + Math.cos(a) * (rOuter - 6)}
             y2={cy + Math.sin(a) * (rOuter - 6)}
-            stroke="rgba(148,163,184,0.12)"
+            stroke="rgba(var(--muted-rgb), 0.12)"
             strokeWidth="0.6"
           />
         );
@@ -437,12 +437,12 @@ export default function ServiceCore({
         x={cx}
         y={cy + rInner + 22 * scale}
         textAnchor="middle"
-        fill="rgba(248,250,252,0.94)"
+        fill="rgba(var(--fg-rgb), 0.94)"
         fontSize={stacked ? 7.5 : 9}
         fontWeight={500}
         letterSpacing="0.16em"
         style={{
-          fontFamily: "var(--font-geist-mono), ui-monospace, monospace",
+          fontFamily: "var(--font-jetbrains-mono), ui-monospace, monospace",
         }}
       >
         {coreTitle}
@@ -464,16 +464,16 @@ export default function ServiceCore({
               fill={
                 lit
                   ? neutral
-                    ? "#E2E8F0"
-                    : "#3B82F6"
+                    ? "rgb(var(--fg-rgb))"
+                    : "rgb(var(--accent-rgb))"
                   : passed
-                    ? "rgba(59,130,246,0.45)"
+                    ? "rgba(var(--accent-rgb), 0.45)"
                     : "transparent"
               }
               stroke={
                 lit || passed
-                  ? "rgba(96,165,250,0.85)"
-                  : "rgba(148,163,184,0.35)"
+                  ? "rgba(var(--accent-rgb), 0.85)"
+                  : "rgba(var(--muted-rgb), 0.35)"
               }
               strokeWidth="1"
             />
@@ -483,18 +483,18 @@ export default function ServiceCore({
                 y1={y + 5}
                 x2={cx - 48 * scale}
                 y2={y + stackGap - 5}
-                stroke="rgba(148,163,184,0.22)"
+                stroke="rgba(var(--muted-rgb), 0.22)"
                 strokeWidth="0.75"
               />
             )}
             <text
               x={cx - 34 * scale}
               y={y + 3.5}
-              fill={lit ? "#F8FAFC" : passed ? "#94A3B8" : "#64748B"}
+              fill={lit ? "rgb(var(--fg-rgb))" : passed ? "rgb(var(--muted-rgb))" : "rgb(var(--muted-rgb))"}
               fontSize={compact ? 8.5 : 9.5}
               letterSpacing="0.18em"
               style={{
-                fontFamily: "var(--font-geist-mono), ui-monospace, monospace",
+                fontFamily: "var(--font-jetbrains-mono), ui-monospace, monospace",
                 textTransform: "uppercase",
               }}
             >
@@ -512,7 +512,7 @@ export default function ServiceCore({
         rx={chamberW * 0.28}
         ry={10 * scale}
         fill="none"
-        stroke={neutral ? "rgba(148,163,184,0.28)" : "rgba(59,130,246,0.32)"}
+        stroke={neutral ? "rgba(var(--muted-rgb), 0.28)" : "rgba(var(--accent-rgb), 0.32)"}
         strokeWidth="1"
         animate={
           reduceMotion || !orbitsAlive
@@ -530,7 +530,7 @@ export default function ServiceCore({
         cy={chamberY + chamberH - 18 * scale}
         rx={chamberW * 0.18}
         ry={5 * scale}
-        fill={neutral ? "rgba(148,163,184,0.06)" : "rgba(37,99,235,0.08)"}
+        fill={neutral ? "rgba(var(--muted-rgb), 0.06)" : "rgba(var(--accent-rgb), 0.08)"}
       />
     </g>
   );
